@@ -1,0 +1,228 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Alan Turing: The Enigma of a Genius</title>
+    <!-- Tailwind CSS CDN for styling -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <style>
+        body {
+            font-family: 'Inter', sans-serif;
+            background-color: #1a202c;
+            color: #e2e8f0;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            min-height: 100vh;
+            margin: 0;
+            padding: 1rem;
+        }
+
+        .slide {
+            background-color: #2d3748;
+            border-radius: 1.5rem;
+            padding: 2.5rem;
+            box-shadow: 0 10px 15px -3px rgba(0, 0, 0, 0.1), 0 4px 6px -2px rgba(0, 0, 0, 0.05);
+            max-width: 900px;
+            width: 100%;
+            min-height: 60vh;
+            display: none;
+            flex-direction: column;
+            justify-content: space-between;
+        }
+
+        .slide-content h2 {
+            font-size: 2.5rem;
+            font-weight: 700;
+            color: #63b3ed;
+            margin-bottom: 1.5rem;
+            text-align: center;
+        }
+        
+        .slide-content h3 {
+            font-size: 1.5rem;
+            font-weight: 600;
+            color: #a0aec0;
+            margin-top: 1.5rem;
+            margin-bottom: 1rem;
+        }
+
+        .slide-content p {
+            font-size: 1rem;
+            line-height: 1.75;
+            text-align: justify;
+        }
+
+        .slide-img {
+            max-width: 80%;
+            height: auto;
+            border-radius: 0.75rem;
+            margin: 2rem auto;
+            border: 2px solid #a0aec0;
+        }
+        
+        .nav-buttons {
+            display: flex;
+            justify-content: space-between;
+            margin-top: 2rem;
+        }
+        
+        .nav-button {
+            padding: 0.75rem 2rem;
+            border-radius: 9999px;
+            font-weight: 600;
+            transition: background-color 0.3s, transform 0.1s;
+            cursor: pointer;
+            text-decoration: none;
+            display: inline-flex;
+            align-items: center;
+            justify-content: center;
+        }
+
+        .next {
+            background-color: #63b3ed;
+            color: #1a202c;
+        }
+
+        .prev {
+            background-color: #4a5568;
+            color: #e2e8f0;
+        }
+
+        .nav-button:hover {
+            transform: scale(1.05);
+        }
+
+        .nav-button:active {
+            transform: scale(0.95);
+        }
+
+        .resource-button {
+            background-color: #48bb78;
+            color: white;
+            padding: 0.5rem 1rem;
+            border-radius: 0.5rem;
+            font-weight: 500;
+            text-decoration: none;
+            display: inline-block;
+            margin-top: 1rem;
+            transition: background-color 0.3s;
+        }
+        .resource-button:hover {
+            background-color: #38a169;
+        }
+
+        .hidden-slide {
+            display: none;
+        }
+    </style>
+</head>
+<body>
+
+<div class="presentation-container">
+    <div id="slide-1" class="slide first-slide">
+        <div class="slide-content text-center">
+            <h2 class="text-white">Alan Turing: The Enigma of a Genius</h2>
+            <p class="text-xl mt-4">Pioneering the foundations of modern computing and artificial intelligence.</p>
+            
+        </div>
+        <div class="nav-buttons justify-end">
+            <button class="nav-button next" onclick="nextSlide()">Next</button>
+        </div>
+    </div>
+
+    <div id="slide-2" class="slide hidden-slide">
+        <div class="slide-content">
+            <h2>Early Life and Education</h2>
+            <p>
+                Born on June 23, 1912, in London, Alan Mathison Turing showed an early affinity for mathematics and science. His formal education at Sherborne School and later King's College, Cambridge, solidified his genius. A pivotal moment in his youth was his close friendship with Christopher Morcom, a fellow student whose death from tuberculosis in 1930 deeply affected Turing and spurred his dedication to his studies.
+            </p>
+        </div>
+        <div class="nav-buttons">
+            <button class="nav-button prev" onclick="prevSlide()">Previous</button>
+            <button class="nav-button next" onclick="nextSlide()">Next</button>
+        </div>
+    </div>
+
+    <div id="slide-3" class="slide hidden-slide">
+        <div class="slide-content">
+            <h2>Breaking the Enigma Code</h2>
+            <p>
+                During World War II, Turing joined the top-secret Government Code and Cypher School at Bletchley Park. He led the section responsible for breaking German naval ciphers. His most crucial contribution was the design of the "Bombe," an electromechanical machine used to decipher Enigma-encrypted messages. This work provided the Allies with vital intelligence and is widely credited with shortening the war by several years.
+            </p>
+            <a href="https://www.youtube.com/watch?v=CUCVnCHXJT8" target="_blank" class="resource-button mt-4">Watch a video on the Bombe machine</a>
+            
+        </div>
+        <div class="nav-buttons">
+            <button class="nav-button prev" onclick="prevSlide()">Previous</button>
+            <button class="nav-button next" onclick="nextSlide()">Next</button>
+        </div>
+    </div>
+
+    <div id="slide-4" class="slide hidden-slide">
+        <div class="slide-content">
+            <h2>The Turing Machine and the Turing Test</h2>
+            <p>
+                In his groundbreaking 1936 paper, Turing proposed the concept of the "Turing machine," a theoretical model of a universal computer that could compute anything that is computable. This concept became the foundational principle of modern computer science. Later, in his 1950 paper, he introduced the "Turing Test," a method for determining if a machine can exhibit intelligent behavior indistinguishable from that of a human.
+            </p>
+            <div class="mt-4">
+                <a href="https://www.ted.com/talks/alex_gendler_the_turing_test_can_a_computer_pass_for_a_human/" target="_blank" class="resource-button">What is the Turing Test?</a>
+                <a href="https://eng.libretexts.org/Bookshelves/Computer_Science/Programming_and_Computation_Fundamentals/Foundations_of_Computation_(Critchlow_and_Eck)/05%3A_Turing_Machines_and_Computability/5.01%3A_Turing_Machines" target="_blank" class="resource-button ml-2">Turing Machine Diagram</a>
+            </div>
+            
+        </div>
+        <div class="nav-buttons">
+            <button class="nav-button prev" onclick="prevSlide()">Previous</button>
+            <button class="nav-button next" onclick="nextSlide()">Next</button>
+        </div>
+    </div>
+    
+    <div id="slide-5" class="slide hidden-slide">
+        <div class="slide-content">
+            <h2>Legacy and Recognition</h2>
+            <p>
+                Turing's work laid the groundwork for the digital revolution. He is now widely regarded as the father of theoretical computer science and artificial intelligence. Tragically, his life was cut short by his prosecution in 1952 for homosexual acts, which were illegal in the UK at the time. Despite this injustice, his legacy has been re-evaluated and he received a posthumous royal pardon in 2013, with his portrait now gracing the Bank of England's £50 note.
+            </p>
+            
+        </div>
+        <div class="nav-buttons justify-start">
+            <button class="nav-button prev" onclick="prevSlide()">Previous</button>
+        </div>
+    </div>
+</div>
+
+<script>
+    const slides = document.querySelectorAll('.slide');
+    let currentSlideIndex = 0;
+
+    function showSlide(index) {
+        slides.forEach(slide => slide.style.display = 'none');
+        slides[index].style.display = 'flex';
+        // Add classes for animations
+        slides[index].classList.remove('hidden-slide');
+        slides[index].classList.add('active-slide');
+    }
+
+    function nextSlide() {
+        if (currentSlideIndex < slides.length - 1) {
+            currentSlideIndex++;
+            showSlide(currentSlideIndex);
+        }
+    }
+
+    function prevSlide() {
+        if (currentSlideIndex > 0) {
+            currentSlideIndex--;
+            showSlide(currentSlideIndex);
+        }
+    }
+
+    // Initialize the presentation
+    document.addEventListener('DOMContentLoaded', () => {
+        showSlide(currentSlideIndex);
+    });
+</script>
+
+</body>
+</html>
