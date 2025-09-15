@@ -1,0 +1,279 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>AI Pioneer Presentation: Allen Newell</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;700&display=swap" rel="stylesheet">
+    <style>
+        body {
+            font-family: 'Inter', sans-serif;
+            background-color: #111827; /* Dark gray background */
+            color: #F3F4F6; /* Light gray text */
+        }
+        .slide {
+            display: none;
+            opacity: 0;
+            transition: opacity 0.5s ease-in-out;
+        }
+        .slide.active {
+            display: block;
+            opacity: 1;
+        }
+        .slide-container {
+            min-height: 80vh;
+        }
+        .resource-btn {
+            display: inline-flex;
+            align-items: center;
+            padding: 0.75rem 1.5rem;
+            background-color: #3B82F6;
+            color: white;
+            font-weight: 500;
+            border-radius: 0.5rem;
+            text-decoration: none;
+            transition: background-color 0.3s ease;
+        }
+        .resource-btn:hover {
+            background-color: #2563EB;
+        }
+        .nav-btn {
+            background-color: #374151;
+            transition: background-color 0.3s;
+        }
+        .nav-btn:hover {
+            background-color: #4B5563;
+        }
+        .nav-btn:disabled {
+            background-color: #1F2937;
+            cursor: not-allowed;
+            opacity: 0.5;
+        }
+        .progress-bar-bg {
+            background-color: #374151;
+        }
+        .progress-bar-fill {
+            background-color: #3B82F6;
+            transition: width 0.3s ease-in-out;
+        }
+        /* Custom animation for elements */
+        .fade-in-up {
+            animation: fadeInUp 0.6s ease-out forwards;
+            opacity: 0;
+        }
+        @keyframes fadeInUp {
+            from {
+                opacity: 0;
+                transform: translateY(20px);
+            }
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+        .fade-in-up-delay-1 { animation-delay: 0.2s; }
+        .fade-in-up-delay-2 { animation-delay: 0.4s; }
+        .fade-in-up-delay-3 { animation-delay: 0.6s; }
+        .fade-in-up-delay-4 { animation-delay: 0.8s; }
+    </style>
+</head>
+<body class="flex flex-col items-center justify-center min-h-screen p-4 md:p-8">
+
+    <div class="w-full max-w-5xl bg-gray-900 rounded-xl shadow-2xl overflow-hidden">
+        <!-- Main Content Area -->
+        <div class="slide-container p-8 md:p-12 lg:p-16">
+
+            <!-- Slide 1: Title -->
+            <div id="slide-1" class="slide active">
+                <div class="grid md:grid-cols-2 gap-8 items-center">
+                    <div class="text-center md:text-left">
+                        <p class="text-blue-400 font-semibold fade-in-up">AI PIONEERS: A RESEARCH PROJECT</p>
+                        <h1 class="text-4xl md:text-6xl font-bold mt-2 mb-4 text-white fade-in-up fade-in-up-delay-1">Allen Newell</h1>
+                        <p class="text-lg text-gray-300 fade-in-up fade-in-up-delay-2">Architect of Artificial Intelligence and Cognitive Science</p>
+                    </div>
+                    <div>
+                        <img src="https://placehold.co/600x400/1F2937/FFFFFF?text=Allen+Newell" alt="Portrait of Allen Newell" class="rounded-lg shadow-lg mx-auto fade-in-up fade-in-up-delay-3" onerror="this.onerror=null;this.src='https://placehold.co/600x400/1F2937/FFFFFF?text=Image+Not+Found';">
+                    </div>
+                </div>
+            </div>
+
+            <!-- Slide 2: Early Life -->
+            <div id="slide-2" class="slide">
+                <h2 class="text-3xl font-bold text-blue-400 mb-6 fade-in-up">Early Life & Education</h2>
+                <div class="grid md:grid-cols-2 gap-8 items-start">
+                    <ul class="space-y-4 text-lg text-gray-300">
+                        <li class="fade-in-up fade-in-up-delay-1">▶ <strong class="text-white">Born:</strong> 1927, San Francisco, CA.</li>
+                        <li class="fade-in-up fade-in-up-delay-2">▶ <strong class="text-white">Education:</strong> B.S. in Physics, Stanford University (1949).</li>
+                        <li class="fade-in-up fade-in-up-delay-3">▶ <strong class="text-white">Early Career:</strong> Joined the RAND Corporation in 1950, a pivotal move that shifted his focus from physics to organizational behavior and decision-making.</li>
+                        <li class="fade-in-up fade-in-up-delay-4">▶ <strong class="text-white">Key Collaboration:</strong> Met Herbert A. Simon at RAND, beginning one of the most fruitful partnerships in scientific history.</li>
+                    </ul>
+                    <img src="https://placehold.co/600x400/1F2937/FFFFFF?text=RAND+Corporation" alt="RAND Corporation building" class="rounded-lg shadow-lg mx-auto fade-in-up fade-in-up-delay-2" onerror="this.onerror=null;this.src='https://placehold.co/600x400/1F2937/FFFFFF?text=Image+Not+Found';">
+                </div>
+            </div>
+
+            <!-- Slide 3: Major Contributions -->
+            <div id="slide-3" class="slide">
+                <h2 class="text-3xl font-bold text-blue-400 mb-6 fade-in-up">Landmark Contributions</h2>
+                <div class="grid md:grid-cols-2 gap-8">
+                    <div class="bg-gray-800 p-6 rounded-lg fade-in-up fade-in-up-delay-1">
+                        <h3 class="text-xl font-bold text-white">The Logic Theorist (1956)</h3>
+                        <p class="mt-2 text-gray-300">Co-created with Simon and Shaw, this is considered the **first true AI program**. It proved mathematical theorems, demonstrating that machines could perform tasks requiring symbolic reasoning and heuristics, not just calculation.</p>
+                    </div>
+                    <div class="bg-gray-800 p-6 rounded-lg fade-in-up fade-in-up-delay-2">
+                        <h3 class="text-xl font-bold text-white">General Problem Solver (1959)</h3>
+                        <p class="mt-2 text-gray-300">An evolution of the Logic Theorist, GPS introduced **means-ends analysis**. It could solve a wider variety of problems by separating the problem-solving logic from the problem's specific details.</p>
+                    </div>
+                </div>
+                 <div class="mt-8 text-center fade-in-up fade-in-up-delay-3">
+                    <a href="https://www.youtube.com/watch?v=kwtZl_s0pdE" target="_blank" class="resource-btn">
+                        <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5 mr-2" viewBox="0 0 20 20" fill="currentColor"><path fill-rule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zM9.555 7.168A1 1 0 008 8v4a1 1 0 001.555.832l3-2a1 1 0 000-1.664l-3-2z" clip-rule="evenodd" /></svg>
+                        Watch: The First "Thinking" Machines
+                    </a>
+                </div>
+            </div>
+
+            <!-- Slide 4: Core AI Philosophy -->
+            <div id="slide-4" class="slide">
+                 <h2 class="text-3xl font-bold text-blue-400 mb-6 fade-in-up">Core Philosophy: The Physical Symbol System</h2>
+                 <div class="grid md:grid-cols-2 gap-8 items-center">
+                    <div class="fade-in-up fade-in-up-delay-1">
+                        <p class="text-lg text-gray-300">Newell and Simon's central hypothesis for AI states:</p>
+                        <blockquote class="my-4 p-4 border-l-4 border-blue-400 bg-gray-800 text-xl italic text-white rounded-r-lg">
+                            "A physical symbol system has the necessary and sufficient means for general intelligent action."
+                        </blockquote>
+                        <p class="text-gray-300">This revolutionary idea proposed that intelligence arises from manipulating symbols according to rules. It defined the mission of "classical" AI for decades.</p>
+                    </div>
+                    <img src="https://placehold.co/600x400/1F2937/FFFFFF?text=Symbolic+Reasoning" alt="Abstract diagram of symbolic reasoning" class="rounded-lg shadow-lg mx-auto fade-in-up fade-in-up-delay-2" onerror="this.onerror=null;this.src='https://placehold.co/600x400/1F2937/FFFFFF?text=Image+Not+Found';">
+                 </div>
+            </div>
+
+            <!-- Slide 5: Influence on Modern AI -->
+            <div id="slide-5" class="slide">
+                 <h2 class="text-3xl font-bold text-blue-400 mb-6 fade-in-up">Influence on Modern AI</h2>
+                 <ul class="space-y-4 text-lg text-gray-300">
+                     <li class="p-4 bg-gray-800 rounded-lg flex items-start fade-in-up fade-in-up-delay-1">
+                         <span class="text-blue-400 mr-3 text-2xl">►</span>
+                         <div><strong class="text-white">Automated Planning & Robotics:</strong> The means-ends analysis from GPS is the foundation for modern search and planning algorithms that guide robots and autonomous systems.</div>
+                    </li>
+                     <li class="p-4 bg-gray-800 rounded-lg flex items-start fade-in-up fade-in-up-delay-2">
+                        <span class="text-blue-400 mr-3 text-2xl">►</span>
+                         <div><strong class="text-white">Expert Systems:</strong> Medical and financial systems that use rule-based reasoning are direct descendants of Newell's symbolic AI work.</div>
+                    </li>
+                     <li class="p-4 bg-gray-800 rounded-lg flex items-start fade-in-up fade-in-up-delay-3">
+                        <span class="text-blue-400 mr-3 text-2xl">►</span>
+                         <div><strong class="text-white">Cognitive Architectures:</strong> His work on the Soar project continues to inspire the modern quest for Artificial General Intelligence (AGI).</div>
+                    </li>
+                 </ul>
+                 <div class="mt-8 text-center fade-in-up fade-in-up-delay-4">
+                    <a href="https://amturing.acm.org/award_winners/newell_3171100.cfm" target="_blank" class="resource-btn">
+                        <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5 mr-2" viewBox="0 0 20 20" fill="currentColor"><path d="M11 3a1 1 0 100 2h2.586l-6.293 6.293a1 1 0 001.414 1.414L15 6.414V9a1 1 0 102 0V4a1 1 0 00-1-1h-5z" /><path d="M5 5a2 2 0 00-2 2v8a2 2 0 002 2h8a2 2 0 002-2v-3a1 1 0 10-2 0v3H5V7h3a1 1 0 000-2H5z" /></svg>
+                        Learn More: Turing Award Lecture
+                    </a>
+                </div>
+            </div>
+
+            <!-- Slide 6: Legacy -->
+            <div id="slide-6" class="slide">
+                 <h2 class="text-3xl font-bold text-blue-400 mb-6 fade-in-up">Legacy & Awards</h2>
+                 <div class="grid md:grid-cols-2 gap-8 items-center">
+                    <div class="fade-in-up fade-in-up-delay-1">
+                        <p class="text-lg text-gray-300">Allen Newell's vision was to understand the very nature of thought. His work built a bridge between computer science and cognitive psychology, establishing that the human mind could be studied as an information processing system.</p>
+                        <div class="mt-6 space-y-3">
+                             <p class="text-xl font-semibold"><span class="text-blue-400">🏆</span> A.M. Turing Award (1975)</p>
+                             <p class="text-xl font-semibold"><span class="text-blue-400">🏆</span> National Medal of Science (1992)</p>
+                        </div>
+                    </div>
+                    <img src="https://placehold.co/600x400/1F2937/FFFFFF?text=Turing+Award" alt="A.M. Turing Award Medal" class="rounded-lg shadow-lg mx-auto fade-in-up fade-in-up-delay-2" onerror="this.onerror=null;this.src='https://placehold.co/600x400/1F2937/FFFFFF?text=Image+Not+Found';">
+                 </div>
+            </div>
+
+        </div>
+
+        <!-- Footer and Navigation -->
+        <div class="bg-gray-800 p-4 flex items-center justify-between">
+            <div class="w-1/3">
+                 <span id="slide-counter" class="text-sm text-gray-400">Slide 1 of 6</span>
+            </div>
+            <div class="w-1/3 flex justify-center space-x-2">
+                <button id="prev-btn" class="nav-btn p-2 rounded-full text-white" disabled>
+                    <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15 19l-7-7 7-7" /></svg>
+                </button>
+                <button id="next-btn" class="nav-btn p-2 rounded-full text-white">
+                    <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7" /></svg>
+                </button>
+            </div>
+            <div class="w-1/3">
+                <div class="w-full progress-bar-bg rounded-full h-2.5">
+                    <div id="progress-bar" class="progress-bar-fill h-2.5 rounded-full" style="width: 16.6%"></div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+<script>
+    document.addEventListener('DOMContentLoaded', function() {
+        const slides = document.querySelectorAll('.slide');
+        const prevBtn = document.getElementById('prev-btn');
+        const nextBtn = document.getElementById('next-btn');
+        const slideCounter = document.getElementById('slide-counter');
+        const progressBar = document.getElementById('progress-bar');
+
+        let currentSlide = 0;
+        const totalSlides = slides.length;
+
+        function showSlide(index) {
+            // Remove active class from all slides
+            slides.forEach(slide => {
+                slide.classList.remove('active');
+            });
+            // Add active class to the current slide
+            slides[index].classList.add('active');
+            
+            // Re-trigger animations for elements in the current slide
+            const animatedElements = slides[index].querySelectorAll('.fade-in-up');
+            animatedElements.forEach(el => {
+                el.style.animation = 'none';
+                // This is a trick to restart the animation
+                el.offsetHeight; 
+                el.style.animation = '';
+            });
+
+
+            updateNavigation(index);
+        }
+
+        function updateNavigation(index) {
+            currentSlide = index;
+            // Update slide counter
+            slideCounter.textContent = `Slide ${index + 1} of ${totalSlides}`;
+            // Update progress bar
+            const progressPercentage = ((index + 1) / totalSlides) * 100;
+            progressBar.style.width = `${progressPercentage}%`;
+
+            // Update button states
+            prevBtn.disabled = index === 0;
+            nextBtn.disabled = index === totalSlides - 1;
+        }
+
+        prevBtn.addEventListener('click', () => {
+            if (currentSlide > 0) {
+                showSlide(currentSlide - 1);
+            }
+        });
+
+        nextBtn.addEventListener('click', () => {
+            if (currentSlide < totalSlides - 1) {
+                showSlide(currentSlide + 1);
+            }
+        });
+
+        // Initialize first slide
+        showSlide(0);
+    });
+</script>
+
+</body>
+</html>
