@@ -1,0 +1,219 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>The Legacy of Arthur Samuel</title>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&display=swap" rel="stylesheet">
+    <script src="https://cdn.tailwindcss.com"></script>
+    <style>
+        body {
+            font-family: 'Inter', sans-serif;
+            background-color: #f3f4f6;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            min-height: 100vh;
+            color: #1f2937;
+        }
+        .presentation-container {
+            background-color: #ffffff;
+            border-radius: 1.5rem;
+            box-shadow: 0 10px 15px -3px rgba(0, 0, 0, 0.1), 0 4px 6px -2px rgba(0, 0, 0, 0.05);
+            max-width: 900px;
+            width: 95%;
+            padding: 2rem;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+        }
+        .slide {
+            display: none;
+            flex-direction: column;
+            align-items: center;
+            text-align: center;
+            padding: 1rem;
+            width: 100%;
+        }
+        .slide.active {
+            display: flex;
+        }
+        .slide-title {
+            font-size: 2.25rem;
+            font-weight: 700;
+            color: #111827;
+            margin-bottom: 1rem;
+        }
+        .slide-content {
+            font-size: 1.125rem;
+            line-height: 1.75rem;
+            color: #374151;
+            margin-bottom: 1.5rem;
+        }
+        .image-container {
+            width: 100%;
+            max-width: 400px;
+            height: auto;
+            margin-top: 1.5rem;
+            margin-bottom: 1.5rem;
+            border-radius: 1rem;
+            overflow: hidden;
+            box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1), 0 2px 4px -1px rgba(0, 0, 0, 0.06);
+        }
+        .image-container img {
+            width: 100%;
+            height: auto;
+        }
+        .nav-buttons {
+            display: flex;
+            justify-content: center;
+            gap: 1rem;
+            margin-top: 2rem;
+        }
+        .nav-button, .action-button {
+            padding: 0.75rem 1.5rem;
+            font-weight: 600;
+            color: #ffffff;
+            background-color: #4f46e5;
+            border-radius: 0.75rem;
+            transition: transform 0.2s ease-in-out, background-color 0.2s ease-in-out;
+            cursor: pointer;
+            border: none;
+            box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1), 0 2px 4px -1px rgba(0, 0, 0, 0.06);
+        }
+        .nav-button:hover, .action-button:hover {
+            background-color: #4338ca;
+            transform: translateY(-2px);
+        }
+        .nav-button:disabled {
+            background-color: #9ca3af;
+            cursor: not-allowed;
+            transform: none;
+        }
+        .action-button {
+            background-color: #2563eb;
+            font-size: 1rem;
+            display: inline-flex;
+            align-items: center;
+            justify-content: center;
+            gap: 0.5rem;
+        }
+        .action-button:hover {
+            background-color: #1d4ed8;
+        }
+        .icon {
+            width: 20px;
+            height: 20px;
+            fill: currentColor;
+        }
+    </style>
+</head>
+<body>
+
+<div class="presentation-container">
+    <div class="nav-buttons">
+        <button id="early-life-btn" class="nav-button">Early Life</button>
+        <button id="contributions-btn" class="nav-button">Contributions to AI</button>
+        <button id="influence-btn" class="nav-button">Influence on AI</button>
+    </div>
+
+    <!-- Slide 1: Early Life -->
+    <div id="early-life" class="slide active">
+        <h1 class="slide-title">Arthur Samuel: Early Life & Vision</h1>
+        <p class="slide-content">
+            Arthur Lee Samuel (1901-1990) was an American pioneer in the field of computer science and artificial intelligence. Born in Emporia, Kansas, he earned a master's degree from MIT. He spent significant time at Bell Labs and the University of Illinois, where he first conceived the idea of a computer program that could learn. His work was foundational to the concept of machine learning, a term he is credited with coining.
+        </p>
+        <div class="image-container">
+            <img src="https://placehold.co/800x600/e5e7eb/4b5563?text=Arthur+Samuel+at+a+computer" alt="Arthur Samuel working at a computer">
+        </div>
+        <a href="https://www.youtube.com/watch?v=t0sSFFs5jAw" target="_blank" class="action-button">
+            <svg class="icon" viewBox="0 0 24 24">
+                <path d="M10 16.5l6-4.5-6-4.5v9zM12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm0 18c-4.41 0-8-3.59-8-8s3.59-8 8-8 8 3.59 8 8-3.59 8-8 8z"/>
+            </svg>
+            Watch a Video About Samuel's Legacy
+        </a>
+    </div>
+
+    <!-- Slide 2: Contributions to AI -->
+    <div id="contributions" class="slide">
+        <h1 class="slide-title">The Checkers Program & Machine Learning</h1>
+        <p class="slide-content">
+            Working at IBM, Samuel developed his most famous work: a checkers-playing program for the IBM 701. This program was revolutionary because it was designed to learn from its own experience. He introduced concepts like "rote learning" (memorizing previous positions) and a "minimax" search algorithm with "alpha-beta pruning" to make strategic decisions. The program famously beat a self-proclaimed checkers master, demonstrating that a machine could learn and improve without being explicitly programmed for every scenario.
+        </p>
+        <div class="image-container">
+            <img src="https://placehold.co/800x600/e5e7eb/4b5563?text=IBM+701+Computer" alt="An image of the IBM 701 computer">
+        </div>
+        <a href="https://www.freecodecamp.org/news/minimax-algorithm-guide-how-to-create-an-unbeatable-ai/" target="_blank" class="action-button">
+            <svg class="icon" viewBox="0 0 24 24">
+                <path d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zM10.5 16.5l5.5-4.5-5.5-4.5v9z"/>
+            </svg>
+            See an Illustration of Minimax
+        </a>
+    </div>
+
+    <!-- Slide 3: Influence on Modern AI -->
+    <div id="influence" class="slide">
+        <h1 class="slide-title">Samuel's Lasting Influence on AI</h1>
+        <p class="slide-content">
+            Arthur Samuel's work laid the groundwork for modern machine learning and reinforcement learning. His use of a game as a testbed for developing and testing learning algorithms became a widely adopted practice. He proved that it was possible for computers to learn and adapt, a concept that now powers everything from recommendation systems and autonomous vehicles to large language models. His pioneering spirit and belief in the potential of machine intelligence cemented his place as a foundational figure in the history of AI.
+        </p>
+        <div class="image-container">
+            <img src="https://placehold.co/800x600/e5e7eb/4b5563?text=A+modern+abstract+AI+illustration" alt="A modern abstract illustration of a digital brain with connections">
+        </div>
+        <a href="https://www.ibm.com/history/early-games" target="_blank" class="action-button">
+            <svg class="icon" viewBox="0 0 24 24">
+                <path d="M10 16.5l6-4.5-6-4.5v9zM12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm0 18c-4.41 0-8-3.59-8-8s3.59-8 8-8 8 3.59 8 8-3.59 8-8 8z"/>
+            </svg>
+            Read More on IBM's AI History
+        </a>
+    </div>
+
+</div>
+
+<script>
+    document.addEventListener('DOMContentLoaded', () => {
+        const slides = {
+            'early-life': document.getElementById('early-life'),
+            'contributions': document.getElementById('contributions'),
+            'influence': document.getElementById('influence')
+        };
+
+        const navButtons = {
+            'early-life-btn': document.getElementById('early-life-btn'),
+            'contributions-btn': document.getElementById('contributions-btn'),
+            'influence-btn': document.getElementById('influence-btn')
+        };
+
+        function showSlide(slideId) {
+            // Hide all slides
+            for (const key in slides) {
+                slides[key].classList.remove('active');
+            }
+
+            // Show the selected slide
+            const selectedSlide = slides[slideId];
+            if (selectedSlide) {
+                selectedSlide.classList.add('active');
+            }
+
+            // Update button states
+            for (const key in navButtons) {
+                navButtons[key].disabled = (navButtons[key].id === `${slideId}-btn`);
+            }
+        }
+
+        // Add event listeners to navigation buttons
+        for (const key in navButtons) {
+            navButtons[key].addEventListener('click', () => {
+                const slideId = key.replace('-btn', '');
+                showSlide(slideId);
+            });
+        }
+
+        // Initialize the presentation on the first slide
+        showSlide('early-life');
+    });
+</script>
+
+</body>
+</html>
