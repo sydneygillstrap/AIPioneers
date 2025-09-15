@@ -1,0 +1,235 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>George Boole: The Father of the Digital Age</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&display=swap');
+        body {
+            font-family: 'Inter', sans-serif;
+            background-color: #f0f4f8;
+            color: #1a202c;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            min-height: 100vh;
+            padding: 1rem;
+        }
+        .presentation-container {
+            background-color: #ffffff;
+            border-radius: 1.5rem;
+            box-shadow: 0 10px 25px rgba(0, 0, 0, 0.1);
+            width: 100%;
+            max-width: 960px;
+            min-height: 60vh;
+            display: flex;
+            flex-direction: column;
+            padding: 2rem;
+            transition: all 0.5s ease-in-out;
+        }
+        .slide {
+            display: none;
+            flex-grow: 1;
+            animation: fadeIn 0.8s ease-in-out;
+            padding: 1rem;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            text-align: center;
+        }
+        .slide.active {
+            display: flex;
+        }
+        @keyframes fadeIn {
+            from { opacity: 0; transform: scale(0.98); }
+            to { opacity: 1; transform: scale(1); }
+        }
+        h1 {
+            font-size: 2.5rem;
+            font-weight: 700;
+            color: #2b6cb0;
+            margin-bottom: 1rem;
+        }
+        h2 {
+            font-size: 2rem;
+            font-weight: 600;
+            color: #2c5282;
+            margin-bottom: 1rem;
+        }
+        p, ul {
+            font-size: 1.125rem;
+            line-height: 1.75;
+            max-width: 800px;
+            margin: 0 auto;
+        }
+        li {
+            list-style-type: disc;
+            margin-left: 2rem;
+            text-align: left;
+        }
+        img {
+            max-width: 100%;
+            height: auto;
+            border-radius: 1rem;
+            box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+            margin-top: 1.5rem;
+            margin-bottom: 1.5rem;
+        }
+        .button-container {
+            display: flex;
+            justify-content: center;
+            gap: 1rem;
+            margin-top: 2rem;
+            width: 100%;
+        }
+        .nav-button {
+            padding: 0.75rem 2rem;
+            background-color: #4c8fff;
+            color: white;
+            font-weight: 600;
+            border-radius: 9999px;
+            transition: background-color 0.3s ease, transform 0.2s ease;
+            cursor: pointer;
+            border: none;
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+        }
+        .nav-button:hover {
+            background-color: #2b6cb0;
+            transform: translateY(-2px);
+        }
+        .nav-button:disabled {
+            background-color: #e2e8f0;
+            cursor: not-allowed;
+            box-shadow: none;
+        }
+        .link-button {
+            display: inline-block;
+            margin-top: 1rem;
+            padding: 0.5rem 1.5rem;
+            background-color: #63b3ed;
+            color: white;
+            font-weight: 600;
+            border-radius: 9999px;
+            text-decoration: none;
+            transition: background-color 0.3s ease, transform 0.2s ease;
+            box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+        }
+        .link-button:hover {
+            background-color: #4299e1;
+            transform: translateY(-2px);
+        }
+        .source-caption {
+            font-size: 0.875rem;
+            color: #a0aec0;
+            margin-top: 0.5rem;
+        }
+    </style>
+</head>
+<body class="bg-gray-100 flex items-center justify-center min-h-screen p-4">
+
+    <div class="presentation-container">
+        <!-- Slide 1: Introduction -->
+        <div id="slide1" class="slide active">
+            <h1 class="text-4xl md:text-5xl font-extrabold text-blue-700 mb-6">George Boole: The Father of the Digital Age</h1>
+            <p class="text-lg md:text-xl text-gray-700 max-w-2xl mb-8">An interactive look at the life and work of the man who laid the logical foundation for all of modern computing and artificial intelligence.</p>
+            <div class="mt-8">
+                <button class="nav-button" onclick="nextSlide()">Start Presentation</button>
+            </div>
+        </div>
+
+        <!-- Slide 2: Early Life -->
+        <div id="slide2" class="slide">
+            <h2 class="text-3xl md:text-4xl font-bold text-blue-600 mb-4">Early Life: The Self-Taught Genius</h2>
+            <img src="https://placehold.co/400x400/2a4365/ffffff?text=Portrait+of+George+Boole" alt="Portrait of George Boole" class="rounded-xl shadow-lg my-6 max-w-xs sm:max-w-sm">
+            <ul class="text-gray-700 list-disc list-inside space-y-2 text-left w-full max-w-2xl">
+                <li>Born in Lincoln, England, in 1815.</li>
+                <li>Had very little formal education; was largely self-taught in mathematics, Latin, and other subjects.</li>
+                <li>Began working as a school teacher at age 16 to support his family.</li>
+                <li>Remarkably, he became the first professor of mathematics at Queen's College, Cork, Ireland, despite having no university degree.</li>
+            </ul>
+        </div>
+
+        <!-- Slide 3: Major Contributions -->
+        <div id="slide3" class="slide">
+            <h2 class="text-3xl md:text-4xl font-bold text-blue-600 mb-4">Major Contributions: Boolean Algebra</h2>
+            <img src="https://placehold.co/500x300/2a4365/ffffff?text=Boolean+Algebra+Truth+Table" alt="Boolean Algebra Truth Table" class="rounded-xl shadow-lg my-6 max-w-md">
+            <ul class="text-gray-700 list-disc list-inside space-y-2 text-left w-full max-w-2xl">
+                <li>Boole's most significant contribution is **Boolean Algebra**, a system of symbolic logic.</li>
+                <li>It operates on two values: **true (1)** and **false (0)**.</li>
+                <li>The core operations are **AND**, **OR**, and **NOT**.</li>
+                <li>This system demonstrated that logical reasoning could be expressed and manipulated with mathematical equations.</li>
+            </ul>
+            <a href="https://www.youtube.com/watch?v=gS6c0_uB5kI" target="_blank" class="link-button mt-6">Watch Video on Boolean Logic</a>
+        </div>
+
+        <!-- Slide 4: Influence on AI -->
+        <div id="slide4" class="slide">
+            <h2 class="text-3xl md:text-4xl font-bold text-blue-600 mb-4">Influence on Modern AI</h2>
+            <img src="https://placehold.co/500x300/2a4365/ffffff?text=Logic+Gates+in+a+Circuit" alt="Logic gates in a circuit" class="rounded-xl shadow-lg my-6 max-w-md">
+            <ul class="text-gray-700 list-disc list-inside space-y-2 text-left w-full max-w-2xl">
+                <li>Boole's algebra became the blueprint for electronic circuits. Claude Shannon realized that a switch's **on/off** state could represent **1/0**.</li>
+                <li>This led to the creation of **logic gates**, the fundamental building blocks of all digital computers.</li>
+                <li>Boole's work to formalize human reasoning mathematically is a core principle behind the field of artificial intelligence.</li>
+                <li>Modern AI systems use Boolean logic for decision-making and for defining rules in algorithms.</li>
+            </ul>
+            <a href="https://georgeboole.com/boole/biography/intro/" target="_blank" class="link-button mt-6">Read More about George Boole</a>
+        </div>
+
+        <!-- Navigation Buttons -->
+        <div id="navButtons" class="button-container hidden">
+            <button id="prevBtn" class="nav-button" onclick="prevSlide()">Previous</button>
+            <button id="nextBtn" class="nav-button" onclick="nextSlide()">Next</button>
+        </div>
+    </div>
+
+    <script>
+        let currentSlide = 0;
+        const slides = document.querySelectorAll('.slide');
+        const totalSlides = slides.length;
+        const prevBtn = document.getElementById('prevBtn');
+        const nextBtn = document.getElementById('nextBtn');
+        const navButtons = document.getElementById('navButtons');
+
+        function showSlide(index) {
+            slides.forEach((slide, i) => {
+                slide.classList.remove('active');
+            });
+            slides[index].classList.add('active');
+            currentSlide = index;
+            updateButtons();
+        }
+
+        function nextSlide() {
+            if (currentSlide === 0) {
+                navButtons.classList.remove('hidden');
+                document.querySelector('#slide1 button').style.display = 'none';
+            }
+            if (currentSlide < totalSlides - 1) {
+                showSlide(currentSlide + 1);
+            }
+        }
+
+        function prevSlide() {
+            if (currentSlide > 1) {
+                showSlide(currentSlide - 1);
+            } else if (currentSlide === 1) {
+                showSlide(0);
+                navButtons.classList.add('hidden');
+                document.querySelector('#slide1 button').style.display = 'inline-block';
+            }
+        }
+
+        function updateButtons() {
+            prevBtn.disabled = currentSlide <= 1;
+            nextBtn.disabled = currentSlide >= totalSlides - 1;
+        }
+
+        // Initial state
+        showSlide(0);
+        updateButtons();
+    </script>
+</body>
+</html>
