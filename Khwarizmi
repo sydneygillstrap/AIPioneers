@@ -1,0 +1,223 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>The Legacy of Al-Khwarizmi</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&display=swap" rel="stylesheet">
+    <style>
+        body {
+            font-family: 'Inter', sans-serif;
+            background-color: #f3f4f6;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            min-height: 100vh;
+            padding: 2rem;
+        }
+        .presentation-container {
+            width: 100%;
+            max-width: 800px;
+            background-color: #ffffff;
+            border-radius: 1rem;
+            box-shadow: 0 10px 15px -3px rgba(0, 0, 0, 0.1), 0 4px 6px -2px rgba(0, 0, 0, 0.05);
+            padding: 2rem;
+            display: flex;
+            flex-direction: column;
+            gap: 1.5rem;
+        }
+        .slide {
+            display: none;
+            flex-direction: column;
+            gap: 1.5rem;
+            animation: fadeIn 0.5s ease-in-out;
+        }
+        .slide.active {
+            display: flex;
+        }
+        @keyframes fadeIn {
+            from { opacity: 0; transform: translateY(10px); }
+            to { opacity: 1; transform: translateY(0); }
+        }
+        .slide-title {
+            font-size: 2.25rem;
+            font-weight: 700;
+            color: #1f2937;
+        }
+        .slide-subtitle {
+            font-size: 1.5rem;
+            font-weight: 600;
+            color: #4b5563;
+        }
+        .slide-content {
+            font-size: 1rem;
+            color: #4b5563;
+            line-height: 1.625;
+        }
+        .navigation-buttons {
+            display: flex;
+            justify-content: space-between;
+            margin-top: 1.5rem;
+        }
+        .nav-btn {
+            padding: 0.75rem 1.5rem;
+            background-color: #4c68f1;
+            color: #ffffff;
+            border-radius: 0.75rem;
+            font-weight: 600;
+            transition: background-color 0.3s ease;
+            cursor: pointer;
+            text-decoration: none;
+            display: inline-flex;
+            align-items: center;
+            justify-content: center;
+        }
+        .nav-btn:hover {
+            background-color: #3b50d3;
+        }
+        .nav-btn:disabled {
+            background-color: #d1d5db;
+            color: #6b7280;
+            cursor: not-allowed;
+        }
+        .resource-btn {
+            display: inline-block;
+            margin-top: 1rem;
+            padding: 0.75rem 1.5rem;
+            background-color: #38a169;
+            color: #ffffff;
+            border-radius: 0.75rem;
+            font-weight: 600;
+            transition: background-color 0.3s ease;
+            text-decoration: none;
+            text-align: center;
+        }
+        .resource-btn:hover {
+            background-color: #2f855a;
+        }
+        .image-container {
+            display: flex;
+            justify-content: center;
+            margin: 1.5rem 0;
+        }
+        .content-image {
+            max-width: 100%;
+            height: auto;
+            border-radius: 0.75rem;
+            box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1), 0 2px 4px -1px rgba(0, 0, 0, 0.06);
+        }
+    </style>
+</head>
+<body class="bg-gray-100 flex items-center justify-center min-h-screen p-8">
+    <div class="presentation-container">
+        
+        <!-- Slide 1: Title -->
+        <div id="slide-1" class="slide active">
+            <h1 class="slide-title">The Legacy of Al-Khwarizmi</h1>
+            <p class="slide-subtitle">An AI Pioneer</p>
+            <div class="image-container">
+                <img src="https://placehold.co/400x250/2563eb/ffffff?text=Al-Khwarizmi+Portrait" alt="A depiction of Al-Khwarizmi" class="content-image">
+            </div>
+            <p class="slide-content">This presentation explores the life and contributions of Al-Khwarizmi, a key figure in the history of mathematics and the conceptual father of artificial intelligence.</p>
+        </div>
+
+        <!-- Slide 2: Early Life -->
+        <div id="slide-2" class="slide">
+            <h2 class="slide-title">Early Life and Major Works</h2>
+            <p class="slide-content">Muhammad ibn Musa al-Khwarizmi (c. 780-850 CE) was a Persian polymath who worked at the House of Wisdom in Baghdad. Under the patronage of Caliph al-Ma'mun, he was part of a vibrant intellectual movement that translated and built upon the works of Greek, Indian, and other scholars.</p>
+            <ul class="list-disc list-inside mt-4 space-y-2 text-gray-700">
+                <li>He is known for his work in mathematics, astronomy, and geography.</li>
+                <li>His name is the origin of the term "algorithm."</li>
+                <li>He is considered the father of algebra.</li>
+            </ul>
+        </div>
+
+        <!-- Slide 3: Contributions to Math -->
+        <div id="slide-3" class="slide">
+            <h2 class="slide-title">Major Mathematical Contributions</h2>
+            <p class="slide-content">Al-Khwarizmi's work was revolutionary in two key areas that still resonate today:</p>
+            <div class="mt-6">
+                <h3 class="slide-subtitle text-lg">The Birth of Algebra</h3>
+                <p class="slide-content mt-2">His book, *Al-Kitab al-Mukhtasar fi Hisab al-Jabr wal-Muqabala*, provided the first systematic approach to solving linear and quadratic equations. The word "algebra" comes from the Arabic word "al-jabr" in his book's title.</p>
+                <a href="https://en.wikipedia.org/wiki/Al-Jabr" target="_blank" class="resource-btn">Learn More about *Al-Jabr*</a>
+            </div>
+            <div class="mt-6">
+                <h3 class="slide-subtitle text-lg">The Concept of the Algorithm</h3>
+                <p class="slide-content mt-2">The word "algorithm" is a Latinized version of his name, *Algoritmi*. He provided clear, step-by-step procedures for solving mathematical problems, laying the conceptual groundwork for what we now understand as an algorithm—a finite sequence of instructions to solve a problem.</p>
+                <a href="https://www.youtube.com/watch?v=k0x-PzO7_1A" target="_blank" class="resource-btn">Watch a Video on Algorithms</a>
+            </div>
+        </div>
+
+        <!-- Slide 4: AI Connection -->
+        <div id="slide-4" class="slide">
+            <h2 class="slide-title">The Foundation of Artificial Intelligence</h2>
+            <p class="slide-content">Al-Khwarizmi's work, while ancient, is the conceptual root of modern AI. His innovations in algorithms and numerical systems are the essential building blocks for how computers function and "think" today.</p>
+            <div class="image-container">
+                <img src="https://placehold.co/400x250/2563eb/ffffff?text=Algorithm+Flowchart" alt="An abstract flowchart representing an algorithm" class="content-image">
+            </div>
+            <ul class="list-disc list-inside mt-4 space-y-2 text-gray-700">
+                <li><strong>Algorithmic Logic:</strong> Every AI system, from a simple chatbot to a complex neural network, relies on algorithms to process data, make decisions, and learn.</li>
+                <li><strong>Numerical Systems:</strong> His promotion of the Hindu-Arabic numeral system, including the crucial concept of zero, paved the way for the binary system used in all computers.</li>
+            </ul>
+        </div>
+
+        <!-- Slide 5: Modern Influence -->
+        <div id="slide-5" class="slide">
+            <h2 class="slide-title">Influence on Modern AI</h2>
+            <p class="slide-content">Al-Khwarizmi's legacy is the systematic approach to problem-solving. This foundational thinking is what allows modern AI to exist and operate at scale. Without his contributions, the very framework for computing would be fundamentally different. He taught us how to break down complex challenges into manageable, repeatable steps, a principle that drives all of today's digital innovations.</p>
+            <a href="https://www.britannica.com/biography/al-Khwarizmi" target="_blank" class="resource-btn">Read More on Al-Khwarizmi's Influence</a>
+        </div>
+
+        <!-- Navigation Buttons -->
+        <div class="navigation-buttons">
+            <button id="prevBtn" class="nav-btn" disabled>Previous</button>
+            <button id="nextBtn" class="nav-btn">Next</button>
+        </div>
+
+    </div>
+
+    <script>
+        document.addEventListener('DOMContentLoaded', () => {
+            const slides = document.querySelectorAll('.slide');
+            const prevBtn = document.getElementById('prevBtn');
+            const nextBtn = document.getElementById('nextBtn');
+            let currentSlide = 0;
+
+            function showSlide(index) {
+                slides.forEach((slide, i) => {
+                    slide.classList.remove('active');
+                    if (i === index) {
+                        slide.classList.add('active');
+                    }
+                });
+                updateButtons(index);
+            }
+
+            function updateButtons(index) {
+                prevBtn.disabled = index === 0;
+                nextBtn.disabled = index === slides.length - 1;
+            }
+
+            prevBtn.addEventListener('click', () => {
+                if (currentSlide > 0) {
+                    currentSlide--;
+                    showSlide(currentSlide);
+                }
+            });
+
+            nextBtn.addEventListener('click', () => {
+                if (currentSlide < slides.length - 1) {
+                    currentSlide++;
+                    showSlide(currentSlide);
+                }
+            });
+
+            // Initial state
+            showSlide(currentSlide);
+        });
+    </script>
+</body>
+</html>
