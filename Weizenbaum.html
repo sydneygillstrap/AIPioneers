@@ -1,0 +1,146 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Joseph Weizenbaum: From AI Pioneer to Critic</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;700&display=swap" rel="stylesheet">
+    <script src="https://cdn.tailwindcss.com"></script>
+    <style>
+        body {
+            font-family: 'Inter', sans-serif;
+            background-color: #f3f4f6;
+            color: #1f2937;
+        }
+        .slide {
+            display: none;
+        }
+        .active-slide {
+            display: block;
+        }
+        .nav-btn.active {
+            background-color: #d1d5db;
+        }
+    </style>
+</head>
+<body class="p-6 md:p-10 lg:p-16">
+
+    <div class="max-w-4xl mx-auto bg-white shadow-xl rounded-lg overflow-hidden">
+        
+        <!-- Navigation Bar -->
+        <nav class="bg-gray-200 p-4 flex justify-center space-x-4 rounded-t-lg">
+            <button class="nav-btn p-3 rounded-md transition-all duration-200 hover:bg-gray-300 active" onclick="showSlide('early-life')">Early Life</button>
+            <button class="nav-btn p-3 rounded-md transition-all duration-200 hover:bg-gray-300" onclick="showSlide('contributions')">Major Contributions</button>
+            <button class="nav-btn p-3 rounded-md transition-all duration-200 hover:bg-gray-300" onclick="showSlide('ai-influence')">Influence on AI</button>
+        </nav>
+
+        <!-- Slide Container -->
+        <div class="p-8 md:p-12 lg:p-16 space-y-8">
+            
+            <!-- Early Life and Education Slide -->
+            <div id="early-life" class="slide active-slide">
+                <h1 class="text-3xl md:text-4xl font-bold mb-4 text-center">Joseph Weizenbaum: From AI Pioneer to Critic</h1>
+                <p class="text-center text-gray-600 mb-8">
+                    An overview of the life and work of a paradoxical figure in computer science.
+                </p>
+                <div class="flex flex-col md:flex-row items-center md:space-x-8">
+                    <div class="md:w-1/2 mb-6 md:mb-0">
+                        <img src="https://placehold.co/600x400/374151/FFFFFF?text=Joseph+Weizenbaum+Portrait" alt="A portrait of Joseph Weizenbaum" class="w-full h-auto rounded-lg shadow-md">
+                    </div>
+                    <div class="md:w-1/2">
+                        <h2 class="text-2xl md:text-3xl font-semibold mb-4">Early Life and Education</h2>
+                        <ul class="list-disc list-inside space-y-3 text-gray-700">
+                            <li>Born in 1923 in Berlin, Germany.</li>
+                            <li>His family fled the Nazi regime in 1935, immigrating to the United States.</li>
+                            <li>Weizenbaum served in the U.S. Army Air Corps during World War II, where he worked on meteorology and decryption.</li>
+                            <li>After the war, he attended Wayne State University, where he earned a bachelor's and master's degree in mathematics.</li>
+                            <li>He began his career working on computer systems, including the first computer at General Electric.</li>
+                        </ul>
+                    </div>
+                </div>
+                <div class="mt-8 text-center">
+                    <p class="text-gray-600">Explore more about his early experiences:</p>
+                    <a href="#" class="inline-block mt-4 px-6 py-2 bg-gray-800 text-white rounded-md hover:bg-gray-700 transition-colors duration-200" onclick="alert('This is a placeholder for a link. A real link might go to a biographical article or a historical documentary.')">
+                        Learn More
+                    </a>
+                </div>
+            </div>
+
+            <!-- Major Contributions Slide -->
+            <div id="contributions" class="slide">
+                <h2 class="text-3xl md:text-4xl font-bold mb-4 text-center">Major Contributions</h2>
+                <div class="flex flex-col md:flex-row items-center md:space-x-8">
+                    <div class="md:w-1/2 order-2 md:order-1">
+                        <h3 class="text-2xl md:text-3xl font-semibold mb-4">The ELIZA Program</h3>
+                        <p class="text-gray-700 mb-4">
+                            Weizenbaum's most famous creation was the ELIZA program (1964-1966), an early natural language processing chatbot. Designed to simulate a Rogerian psychotherapist, ELIZA worked by identifying keywords and applying pattern-matching rules to rephrase the user's input as a question, creating an illusion of understanding.
+                        </p>
+                        <p class="text-gray-700 mb-4">
+                            The program was created to demonstrate the superficiality of human-computer communication, but Weizenbaum was dismayed to find that users, including his own secretary, began to form deep emotional bonds with the program, attributing genuine human-like qualities to it.
+                        </p>
+                        <div class="mt-8 text-center">
+                            <p class="text-gray-600">See a demonstration of the ELIZA program:</p>
+                            <!-- Note: The following link is a placeholder. A real link could be to a video demonstration. -->
+                            <a href="https://www.youtube.com/watch?v=RMK9AphfLco" target="_blank" class="inline-block mt-4 px-6 py-2 bg-gray-800 text-white rounded-md hover:bg-gray-700 transition-colors duration-200">
+                                Watch a Demo
+                            </a>
+                        </div>
+                    </div>
+                    <div class="md:w-1/2 order-1 md:order-2 mb-6 md:mb-0">
+                        <img src="https://placehold.co/600x400/d1d5db/FFFFFF?text=ELIZA+Interface" alt="An illustration of the ELIZA program's conversational interface" class="w-full h-auto rounded-lg shadow-md">
+                    </div>
+                </div>
+            </div>
+
+            <!-- Contributions to and Influence on AI Slide -->
+            <div id="ai-influence" class="slide">
+                <h2 class="text-3xl md:text-4xl font-bold mb-4 text-center">Contributions to and Influence on AI</h2>
+                <div class="flex flex-col md:flex-row items-center md:space-x-8">
+                    <div class="md:w-1/2 mb-6 md:mb-0">
+                         
+                    </div>
+                    <div class="md:w-1/2">
+                        <h3 class="text-2xl md:text-3xl font-semibold mb-4">The Book and the Moral Compass</h3>
+                        <p class="text-gray-700 mb-4">
+                            Weizenbaum’s observations led him to become a vocal critic of the field he helped create. His landmark 1976 book, <strong>"Computer Power and Human Reason: From Judgment to Calculation,"</strong> is a foundational text in AI ethics.
+                        </p>
+                        <p class="text-gray-700 mb-4">
+                            The book argues that while computers can perform complex calculations and make decisions, they lack the capacity for human judgment, wisdom, and empathy. He asserted that there are certain tasks—such as making ethical, legal, or moral decisions—that should never be delegated to a machine.
+                        </p>
+                        <div class="mt-8 text-center">
+                            <p class="text-gray-600">Learn more about Weizenbaum's ethical concerns:</p>
+                            <!-- Note: This is a placeholder for a link to an article or video about Weizenbaum's ethical work. -->
+                            <a href="https://www.youtube.com/watch?v=IZejhE85_YY" target="_blank" class="inline-block mt-4 px-6 py-2 bg-gray-800 text-white rounded-md hover:bg-gray-700 transition-colors duration-200">
+                                Watch an Interview
+                            </a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+        </div>
+
+    </div>
+
+    <script>
+        // JavaScript for handling slide navigation
+        function showSlide(slideId) {
+            const slides = document.querySelectorAll('.slide');
+            const navBtns = document.querySelectorAll('.nav-btn');
+
+            slides.forEach(slide => {
+                slide.classList.remove('active-slide');
+            });
+            navBtns.forEach(btn => {
+                btn.classList.remove('active');
+            });
+
+            document.getElementById(slideId).classList.add('active-slide');
+            event.target.classList.add('active');
+        }
+    </script>
+
+</body>
+</html>
