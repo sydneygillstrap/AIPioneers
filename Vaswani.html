@@ -1,1 +1,215 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>AI Pioneer: Ashish Vaswani</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;700&display=swap" rel="stylesheet">
+    <style>
+        body {
+            font-family: 'Inter', sans-serif;
+        }
+        .slide {
+            display: none;
+        }
+        .slide.active {
+            display: block;
+        }
+        .fade-in {
+            animation: fadeIn 0.5s ease-in-out;
+        }
+        @keyframes fadeIn {
+            from { opacity: 0; }
+            to { opacity: 1; }
+        }
+        /* Custom button style for better visibility and interaction */
+        .resource-btn {
+            transition: all 0.3s ease;
+        }
+        .resource-btn:hover {
+            transform: translateY(-2px);
+            box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
+        }
+    </style>
+</head>
+<body class="bg-gray-100 text-gray-800 flex flex-col items-center justify-center min-h-screen p-4">
+
+    <div class="w-full max-w-4xl bg-white rounded-2xl shadow-2xl overflow-hidden">
+        <div class="p-8 md:p-12" id="presentation-container">
+
+            <!-- Slide 1: Title -->
+            <div class="slide active fade-in" data-slide="1">
+                <div class="text-center">
+                    <h1 class="text-4xl md:text-5xl font-bold text-indigo-600 mb-4">Ashish Vaswani</h1>
+                    <p class="text-xl md:text-2xl text-gray-600 mb-8">A Pioneer of Modern Artificial Intelligence</p>
+                    <img src="https://placehold.co/800x400/7c3aed/ffffff?text=Ashish+Vaswani&font=inter" alt="Ashish Vaswani" class="mx-auto rounded-lg shadow-md mb-8" onerror="this.onerror=null;this.src='https://placehold.co/800x400/7c3aed/ffffff?text=Image+Not+Found&font=inter';">
+                    <p class="text-lg">The lead author of the groundbreaking paper "Attention Is All You Need," which introduced the Transformer architecture.</p>
+                </div>
+            </div>
+
+            <!-- Slide 2: Early Life & Education -->
+            <div class="slide" data-slide="2">
+                <h2 class="text-3xl font-bold text-gray-800 mb-6 text-center">Early Life & Education</h2>
+                <div class="flex flex-col md:flex-row items-center gap-8">
+                    <div class="md:w-1/2">
+                        <ul class="space-y-4 text-lg">
+                            <li class="flex items-start">
+                                <svg class="w-6 h-6 text-indigo-500 mr-3 mt-1 flex-shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z"></path></svg>
+                                <span>Completed his undergraduate studies in India, earning a B.E. degree from the Birla Institute of Technology and Science, Pilani.</span>
+                            </li>
+                            <li class="flex items-start">
+                                <svg class="w-6 h-6 text-indigo-500 mr-3 mt-1 flex-shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z"></path></svg>
+                                <span>Moved to the United States for graduate studies, pursuing his passion for machine learning and natural language processing (NLP).</span>
+                            </li>
+                            <li class="flex items-start">
+                                <svg class="w-6 h-6 text-indigo-500 mr-3 mt-1 flex-shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z"></path></svg>
+                                <span>Earned his Ph.D. from the University of Southern California (USC), where his research laid the groundwork for his future innovations.</span>
+                            </li>
+                        </ul>
+                    </div>
+                    <div class="md:w-1/2">
+                        <img src="https://placehold.co/400x300/e0e7ff/3730a3?text=USC&font=inter" alt="University of Southern California" class="rounded-lg shadow-md mx-auto" onerror="this.onerror=null;this.src='https://placehold.co/400x300/e0e7ff/3730a3?text=Image+Error&font=inter';">
+                    </div>
+                </div>
+            </div>
+
+            <!-- Slide 3: The Transformer Revolution -->
+            <div class="slide" data-slide="3">
+                <h2 class="text-3xl font-bold text-gray-800 mb-6 text-center">The Transformer Revolution</h2>
+                <p class="text-lg text-center mb-6">In 2017, while at Google Brain, Vaswani and his co-authors published "Attention Is All You Need," one of the most cited papers in AI history.</p>
+                <img src="https://placehold.co/800x450/f3f4f6/4f46e5?text=Transformer+Architecture+Diagram&font=inter" alt="Transformer Architecture Diagram" class="mx-auto rounded-lg shadow-lg mb-6" onerror="this.onerror=null;this.src='https://placehold.co/800x450/f3f4f6/4f46e5?text=Diagram&font=inter';">
+                <p class="text-md text-gray-600 text-center">This paper introduced the <strong>Transformer model</strong>, which abandoned traditional recurrent or convolutional layers in favor of a novel <strong>self-attention mechanism</strong>. This allowed for significantly more parallelization, dramatically reducing training times and enabling models to be scaled to unprecedented sizes.</p>
+            </div>
+
+            <!-- Slide 4: Major Contributions -->
+            <div class="slide" data-slide="4">
+                <h2 class="text-3xl font-bold text-gray-800 mb-6 text-center">Key Contributions to AI</h2>
+                <div class="grid md:grid-cols-2 gap-6">
+                    <div class="bg-indigo-50 p-6 rounded-lg">
+                        <h3 class="text-xl font-bold text-indigo-700 mb-2">The Transformer Architecture</h3>
+                        <p>The foundational blueprint for nearly all modern large-scale AI models. Its scalable and efficient design was a paradigm shift in sequence processing.</p>
+                    </div>
+                    <div class="bg-purple-50 p-6 rounded-lg">
+                        <h3 class="text-xl font-bold text-purple-700 mb-2">Self-Attention Mechanism</h3>
+                        <p>The core innovation of the Transformer. It allows the model to weigh the importance of different words in the input text, capturing complex contextual relationships regardless of their distance from one another.</p>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Slide 5: Influence on Modern AI -->
+            <div class="slide" data-slide="5">
+                <h2 class="text-3xl font-bold text-gray-800 mb-6 text-center">Influence on Modern AI</h2>
+                <p class="text-lg text-center mb-8">The Transformer architecture is not just influential; it's the bedrock of today's generative AI boom. Its impact is seen across the entire field.</p>
+                <div class="flex justify-center items-center flex-wrap gap-6">
+                    <div class="text-center p-4 bg-gray-100 rounded-lg">
+                        <img src="https://placehold.co/100x100/ffffff/000000?text=ChatGPT" class="mx-auto mb-2 rounded-full" alt="ChatGPT Logo">
+                        <span class="font-semibold">LLMs (ChatGPT)</span>
+                    </div>
+                     <div class="text-center p-4 bg-gray-100 rounded-lg">
+                        <img src="https://placehold.co/100x100/ffffff/000000?text=BERT" class="mx-auto mb-2 rounded-full" alt="BERT Logo">
+                        <span class="font-semibold">NLP (BERT)</span>
+                    </div>
+                    <div class="text-center p-4 bg-gray-100 rounded-lg">
+                        <img src="https://placehold.co/100x100/ffffff/000000?text=DALL-E" class="mx-auto mb-2 rounded-full" alt="DALL-E Logo">
+                        <span class="font-semibold">Image Generation</span>
+                    </div>
+                    <div class="text-center p-4 bg-gray-100 rounded-lg">
+                        <img src="https://placehold.co/100x100/ffffff/000000?text=AlphaFold" class="mx-auto mb-2 rounded-full" alt="AlphaFold Logo">
+                        <span class="font-semibold">Protein Folding</span>
+                    </div>
+                </div>
+                <p class="text-center mt-8 text-lg">After Google, Vaswani co-founded <strong>Adept AI Labs</strong>, aiming to build AI systems that can perform general tasks for humans.</p>
+            </div>
+
+             <!-- Slide 6: Additional Resources -->
+            <div class="slide" data-slide="6">
+                <h2 class="text-3xl font-bold text-gray-800 mb-8 text-center">Learn More</h2>
+                <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
+                    <a href="https://arxiv.org/abs/1706.03762" target="_blank" class="resource-btn block bg-indigo-600 text-white text-center py-4 px-6 rounded-lg font-semibold shadow-md">
+                        Read the Original Paper
+                        <span class="block text-sm font-normal opacity-80">"Attention Is All You Need"</span>
+                    </a>
+                    <a href="https://www.youtube.com/watch?v=4Bdc55j80l8" target="_blank" class="resource-btn block bg-red-600 text-white text-center py-4 px-6 rounded-lg font-semibold shadow-md">
+                        Watch an Explanation
+                        <span class="block text-sm font-normal opacity-80">Video on the Transformer Model</span>
+                    </a>
+                    <a href="http://jalammar.github.io/illustrated-transformer/" target="_blank" class="resource-btn block bg-green-600 text-white text-center py-4 px-6 rounded-lg font-semibold shadow-md">
+                        The Illustrated Transformer
+                        <span class="block text-sm font-normal opacity-80">A Visual Guide</span>
+                    </a>
+                    <a href="https://www.adept.ai/" target="_blank" class="resource-btn block bg-gray-800 text-white text-center py-4 px-6 rounded-lg font-semibold shadow-md">
+                        Visit Adept AI Labs
+                        <span class="block text-sm font-normal opacity-80">Vaswani's Current Company</span>
+                    </a>
+                </div>
+            </div>
+
+        </div>
+
+        <!-- Navigation -->
+        <div class="flex justify-between items-center bg-gray-100 p-4 border-t border-gray-200">
+            <button id="prevBtn" class="bg-gray-300 hover:bg-gray-400 text-gray-800 font-bold py-2 px-4 rounded-lg transition duration-300 disabled:opacity-50 disabled:cursor-not-allowed">Previous</button>
+            <div id="slide-counter" class="text-gray-600 font-medium">Slide 1 / 6</div>
+            <button id="nextBtn" class="bg-indigo-600 hover:bg-indigo-700 text-white font-bold py-2 px-4 rounded-lg transition duration-300">Next</button>
+        </div>
+    </div>
+
+    <script>
+        document.addEventListener('DOMContentLoaded', function () {
+            const slides = document.querySelectorAll('.slide');
+            const prevBtn = document.getElementById('prevBtn');
+            const nextBtn = document.getElementById('nextBtn');
+            const slideCounter = document.getElementById('slide-counter');
+            let currentSlide = 0;
+            const totalSlides = slides.length;
+
+            function showSlide(index) {
+                // Ensure index is within bounds
+                if (index < 0 || index >= totalSlides) {
+                    return;
+                }
+                
+                slides.forEach((slide, i) => {
+                    if (i === index) {
+                        slide.classList.add('active');
+                        slide.classList.remove('fade-in'); // remove to re-trigger animation
+                        void slide.offsetWidth; // trigger reflow
+                        slide.classList.add('fade-in');
+                    } else {
+                        slide.classList.remove('active');
+                    }
+                });
+                currentSlide = index;
+                updateControls();
+            }
+
+            function updateControls() {
+                // Update slide counter
+                slideCounter.textContent = `Slide ${currentSlide + 1} / ${totalSlides}`;
+                
+                // Update button states
+                prevBtn.disabled = currentSlide === 0;
+                nextBtn.disabled = currentSlide === totalSlides - 1;
+            }
+
+            nextBtn.addEventListener('click', () => {
+                if (currentSlide < totalSlides - 1) {
+                    showSlide(currentSlide + 1);
+                }
+            });
+
+            prevBtn.addEventListener('click', () => {
+                if (currentSlide > 0) {
+                    showSlide(currentSlide - 1);
+                }
+            });
+
+            // Initial setup
+            showSlide(0);
+        });
+    </script>
+
+</body>
+</html>
 
