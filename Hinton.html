@@ -1,1 +1,195 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>AI Pioneers: Geoffrey Hinton</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+    <style>
+        body {
+            font-family: 'Inter', sans-serif;
+        }
+        .slide {
+            display: none;
+        }
+        .slide.active {
+            display: block;
+        }
+        .slide-container {
+            min-height: 500px;
+        }
+        .resource-btn {
+            transition: all 0.3s ease;
+        }
+        .resource-btn:hover {
+            transform: translateY(-2px);
+            box-shadow: 0 4px 10px rgba(0,0,0,0.1);
+        }
+    </style>
+</head>
+<body class="bg-gray-100 flex items-center justify-center min-h-screen p-4">
 
+    <div class="w-full max-w-4xl bg-white rounded-2xl shadow-lg overflow-hidden">
+        <header class="bg-blue-600 text-white p-6">
+            <h1 class="text-3xl font-bold text-center">AI Pioneers: Geoffrey Hinton</h1>
+            <p class="text-center text-blue-200 mt-1">An Interactive Presentation</p>
+        </header>
+
+        <main class="p-8 md:p-12 slide-container relative">
+            <!-- Slide 1: Title -->
+            <div id="slide-1" class="slide active animate-fade-in">
+                <div class="text-center">
+                    <img src="https://www.cs.toronto.edu/~hinton/hinton.jpeg" alt="Geoffrey Hinton" class="mx-auto rounded-full w-48 h-48 object-cover mb-6 border-4 border-blue-200 shadow-md" onerror="this.onerror=null;this.src='https://placehold.co/192x192/EBF4FF/76A9FA?text=Hinton';">
+                    <h2 class="text-4xl font-bold text-gray-800">Geoffrey Hinton</h2>
+                    <p class="text-xl text-gray-600 mt-2">The "Godfather of AI"</p>
+                    <p class="mt-8 text-lg text-gray-700 max-w-2xl mx-auto">This presentation explores the life, work, and monumental impact of Geoffrey Hinton, a central figure in the development of modern artificial intelligence and deep learning.</p>
+                </div>
+            </div>
+
+            <!-- Slide 2: Early Life -->
+            <div id="slide-2" class="slide">
+                <h2 class="text-3xl font-bold text-gray-800 mb-6 border-b-4 border-blue-500 pb-2">Early Life & Education</h2>
+                <div class="grid md:grid-cols-2 gap-8 items-center">
+                    <div>
+                        <ul class="space-y-4 text-lg text-gray-700">
+                            <li><span class="font-semibold text-blue-600">Born:</span> December 6, 1947, in Wimbledon, London.</li>
+                            <li><span class="font-semibold text-blue-600">Initial Studies:</span> Attended King's College, Cambridge, where he explored various subjects before graduating with a degree in experimental psychology in 1970.</li>
+                            <li><span class="font-semibold text-blue-600">A New Path:</span> His interest in intelligence led him away from psychology and towards the nascent field of artificial intelligence.</li>
+                            <li><span class="font-semibold text-blue-600">Doctorate:</span> Earned his PhD in Artificial Intelligence from the University of Edinburgh in 1978, during a period known as the "AI winter" when funding and interest in the field were low.</li>
+                        </ul>
+                    </div>
+                    <div class="flex justify-center">
+                         <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/f/f0/Old_College%2C_University_of_Edinburgh_geograph-3824317-by-Richard-Webb.jpg/640px-Old_College%2C_University_of_Edinburgh_geograph-3824317-by-Richard-Webb.jpg" alt="University of Edinburgh" class="rounded-lg shadow-lg" onerror="this.onerror=null;this.src='https://placehold.co/400x300/EBF4FF/76A9FA?text=Edinburgh';">
+                    </div>
+                </div>
+            </div>
+
+            <!-- Slide 3: Major Contributions -->
+            <div id="slide-3" class="slide">
+                <h2 class="text-3xl font-bold text-gray-800 mb-6 border-b-4 border-blue-500 pb-2">Major Contributions</h2>
+                <div class="space-y-8">
+                    <div>
+                        <h3 class="text-2xl font-semibold text-blue-700 mb-2">The Backpropagation Algorithm (1986)</h3>
+                        <div class="flex flex-col md:flex-row items-center gap-6">
+                            <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/e/e4/Backpropagation_diagram.svg/1200px-Backpropagation_diagram.svg.png" alt="Backpropagation Diagram" class="w-full md:w-1/3 rounded-lg" onerror="this.onerror=null;this.src='https://placehold.co/400x300/EBF4FF/76A9FA?text=Backprop';">
+                            <p class="text-lg text-gray-700 flex-1">While he didn't invent it, Hinton, along with David Rumelhart and Ronald Williams, co-authored a highly cited paper that popularized the backpropagation algorithm. This was a revolutionary step, as it provided an efficient way to train multi-layered neural networks, allowing them to learn complex patterns and representations. It remains the foundational algorithm for training most deep learning models today.</p>
+                        </div>
+                    </div>
+                    <div>
+                        <h3 class="text-2xl font-semibold text-blue-700 mb-2">Boltzmann Machines (1985)</h3>
+                         <div class="flex flex-col md:flex-row-reverse items-center gap-6">
+                             <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/5/52/BoltzmannMachine.svg/800px-BoltzmannMachine.svg.png" alt="Boltzmann Machine Architecture" class="w-full md:w-1/3 rounded-lg" onerror="this.onerror=null;this.src='https://placehold.co/400x300/EBF4FF/76A9FA?text=Boltzmann';">
+                            <p class="text-lg text-gray-700 flex-1">Co-invented with David Ackley and Terry Sejnowski, Boltzmann machines are a type of stochastic recurrent neural network. They were one of the first neural networks capable of learning internal representations, enabling them to solve difficult combinatorial problems and paving the way for unsupervised deep learning models.</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Slide 4: Contributions to AI -->
+            <div id="slide-4" class="slide">
+                <h2 class="text-3xl font-bold text-gray-800 mb-6 border-b-4 border-blue-500 pb-2">Pioneering the AI Revolution</h2>
+                 <ul class="space-y-4 text-lg text-gray-700">
+                    <li><span class="font-semibold text-blue-600">A Champion in the "AI Winter":</span> Hinton's persistent belief in neural networks during a time of widespread skepticism was crucial for keeping the field alive.</li>
+                    <li><span class="font-semibold text-blue-600">ImageNet Breakthrough (2012):</span> Hinton and two of his students from the University of Toronto, Alex Krizhevsky and Ilya Sutskever, created "AlexNet." This deep neural network dramatically outperformed all other models in the ImageNet image recognition competition, marking a turning point that ignited the modern AI boom.</li>
+                    <li><span class="font-semibold text-blue-600">Industry and Academia:</span> In 2013, he joined Google's AI team (via an acquisition of his company, DNNresearch) while retaining his professorship. This move bridged the gap between academic research and real-world application, accelerating AI development.</li>
+                    <li><span class="font-semibold text-blue-600">Turing Award (2018):</span> He received the A.M. Turing Award, often called the "Nobel Prize of Computing," alongside Yoshua Bengio and Yann LeCun for their foundational work on deep learning.</li>
+                </ul>
+            </div>
+
+            <!-- Slide 5: Influence on Modern AI -->
+            <div id="slide-5" class="slide">
+                <h2 class="text-3xl font-bold text-gray-800 mb-6 border-b-4 border-blue-500 pb-2">Influence on Modern AI</h2>
+                 <p class="text-lg text-gray-700 mb-6">Hinton's work is not just a part of AI's history; it is the bedrock of its present and future. His contributions directly enable the AI technologies we use every day.</p>
+                <div class="grid md:grid-cols-2 gap-6 text-gray-700">
+                    <div class="bg-blue-50 p-6 rounded-lg">
+                        <h3 class="text-xl font-semibold text-blue-800 mb-2">Powering Today's Tech</h3>
+                        <p>The backpropagation algorithm he popularized is the engine behind large language models (like ChatGPT), image and speech recognition systems (like those in your phone), and autonomous vehicle technology.</p>
+                    </div>
+                    <div class="bg-green-50 p-6 rounded-lg">
+                        <h3 class="text-xl font-semibold text-green-800 mb-2">A Voice of Caution</h3>
+                        <p>In 2023, Hinton famously resigned from his position at Google. This allowed him to speak more freely about the potential long-term risks of advanced AI, adding a powerful and credible voice to the global conversation on AI safety and ethics.</p>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Slide 6: Resources -->
+            <div id="slide-6" class="slide">
+                <h2 class="text-3xl font-bold text-gray-800 mb-6 border-b-4 border-blue-500 pb-2">Further Learning & Resources</h2>
+                <p class="text-lg text-gray-700 mb-8">Explore more about Geoffrey Hinton's work and ideas through these additional resources.</p>
+                <div class="grid sm:grid-cols-2 lg:grid-cols-3 gap-6">
+                    <a href="https://www.youtube.com/watch?v=fnhanaCon_I" target="_blank" class="block bg-red-100 p-6 rounded-lg shadow-md resource-btn">
+                        <h3 class="text-xl font-semibold text-red-800">The Next Generation of Neural Networks</h3>
+                        <p class="text-red-700 mt-2">A talk by Geoffrey Hinton at Google.</p>
+                    </a>
+                    <a href="https://www.cs.toronto.edu/~hinton/absps/NatureDeepReview.pdf" target="_blank" class="block bg-indigo-100 p-6 rounded-lg shadow-md resource-btn">
+                        <h3 class="text-xl font-semibold text-indigo-800">Deep Learning (Nature, 2015)</h3>
+                        <p class="text-indigo-700 mt-2">A review article co-authored by Hinton, LeCun, and Bengio.</p>
+                    </a>
+                     <a href="https://www.nytimes.com/2023/05/01/technology/ai-google-geoffrey-hinton.html" target="_blank" class="block bg-yellow-100 p-6 rounded-lg shadow-md resource-btn">
+                        <h3 class="text-xl font-semibold text-yellow-800">NYT Interview on AI Risks</h3>
+                        <p class="text-yellow-700 mt-2">The New York Times article covering his departure from Google.</p>
+                    </a>
+                </div>
+            </div>
+
+        </main>
+
+        <footer class="bg-gray-50 p-4 flex justify-between items-center border-t">
+            <button id="prevBtn" class="bg-gray-300 text-gray-700 font-bold py-2 px-6 rounded-lg hover:bg-gray-400 transition duration-300 disabled:opacity-50 disabled:cursor-not-allowed">Previous</button>
+            <div id="slide-indicator" class="text-gray-600 text-sm">Slide 1 of 6</div>
+            <button id="nextBtn" class="bg-blue-600 text-white font-bold py-2 px-6 rounded-lg hover:bg-blue-700 transition duration-300 disabled:opacity-50 disabled:cursor-not-allowed">Next</button>
+        </footer>
+    </div>
+
+    <script>
+        // --- JavaScript for Slide Navigation ---
+
+        let currentSlide = 1;
+        const totalSlides = 6;
+        const slides = document.querySelectorAll('.slide');
+        const prevBtn = document.getElementById('prevBtn');
+        const nextBtn = document.getElementById('nextBtn');
+        const slideIndicator = document.getElementById('slide-indicator');
+
+        function showSlide(slideNumber) {
+            // Hide all slides
+            slides.forEach(slide => {
+                slide.classList.remove('active');
+            });
+
+            // Show the correct slide
+            const slideToShow = document.getElementById(`slide-${slideNumber}`);
+            if (slideToShow) {
+                slideToShow.classList.add('active');
+            }
+
+            // Update button states
+            prevBtn.disabled = (slideNumber === 1);
+            nextBtn.disabled = (slideNumber === totalSlides);
+
+            // Update slide indicator
+            slideIndicator.textContent = `Slide ${slideNumber} of ${totalSlides}`;
+        }
+
+        nextBtn.addEventListener('click', () => {
+            if (currentSlide < totalSlides) {
+                currentSlide++;
+                showSlide(currentSlide);
+            }
+        });
+
+        prevBtn.addEventListener('click', () => {
+            if (currentSlide > 1) {
+                currentSlide--;
+                showSlide(currentSlide);
+            }
+        });
+
+        // Initialize the first slide
+        showSlide(currentSlide);
+
+    </script>
+
+</body>
+</html>
