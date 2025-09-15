@@ -1,1 +1,156 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Herbert Simon: A Pioneer of Artificial Intelligence</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;700&display=swap" rel="stylesheet">
+    <style>
+        body {
+            font-family: 'Inter', sans-serif;
+        }
+        .slide {
+            display: none;
+        }
+        .active-slide {
+            display: block;
+        }
+        .nav-button {
+            cursor: pointer;
+            padding: 0.5rem 1rem;
+            border-radius: 0.5rem;
+            background-color: #3B82F6;
+            color: white;
+            transition: background-color 0.3s;
+        }
+        .nav-button:hover {
+            background-color: #2563EB;
+        }
+        .resource-button {
+            display: inline-block;
+            margin-top: 1rem;
+            padding: 0.5rem 1rem;
+            border-radius: 0.5rem;
+            background-color: #10B981;
+            color: white;
+            text-decoration: none;
+            transition: background-color 0.3s;
+        }
+        .resource-button:hover {
+            background-color: #059669;
+        }
+    </style>
+</head>
+<body class="bg-gray-100">
+
+    <div class="container mx-auto p-4 md:p-8">
+        <div class="bg-white rounded-lg shadow-xl overflow-hidden">
+            <div id="slide-container" class="p-8">
+                <!-- Slide 1: Title -->
+                <div id="slide1" class="slide active-slide">
+                    <div class="text-center">
+                        <h1 class="text-4xl font-bold text-gray-800 mb-2">Herbert A. Simon</h1>
+                        <p class="text-2xl text-gray-600">A Pioneer of Artificial Intelligence</p>
+                        
+                        <p class="mt-4 text-lg text-gray-700">An interactive presentation on his life, work, and legacy.</p>
+                    </div>
+                </div>
+
+                <!-- Slide 2: Early Life -->
+                <div id="slide2" class="slide">
+                    <h2 class="text-3xl font-bold text-gray-800 mb-4">Early Life and Education</h2>
+                    
+                    <ul class="list-disc list-inside text-lg text-gray-700 space-y-2">
+                        <li>Born in Milwaukee, Wisconsin, in 1916.</li>
+                        <li>His father was an electrical engineer and his mother an accomplished pianist.</li>
+                        <li>Showed an early interest in science and decision-making.</li>
+                        <li>Enrolled in the University of Chicago in 1933, earning his bachelor's degree in 1936 and his Ph.D. in political science in 1943.</li>
+                        <li>His interdisciplinary education laid the groundwork for his future research.</li>
+                    </ul>
+                    <a href="https://www.nobelprize.org/prizes/economic-sciences/1978/simon/biographical/" target="_blank" class="resource-button">Learn More</a>
+                </div>
+
+                <!-- Slide 3: Major Contributions -->
+                <div id="slide3" class="slide">
+                    <h2 class="text-3xl font-bold text-gray-800 mb-4">Major Contributions</h2>
+                    
+                    <ul class="list-disc list-inside text-lg text-gray-700 space-y-2">
+                        <li><b>Bounded Rationality:</b> Challenged the classical economic assumption of perfect rationality. He argued that human decision-making is limited by the information they have, their cognitive limitations, and the finite amount of time they have to make a decision.</li>
+                        <li><b>Satisficing:</b> Coined the term to describe the strategy of seeking a satisfactory solution rather than the optimal one.</li>
+                        <li><b>Administrative Behavior:</b> His book, a cornerstone of organization theory, described how organizations function and how decisions are made within them.</li>
+                        <li><b>Nobel Prize in Economics (1978):</b> Awarded for his pioneering research into the decision-making process within economic organizations.</li>
+                    </ul>
+                     <a href="https://www.youtube.com/watch?v=I_gPqbLh_wA" target="_blank" class="resource-button">Watch a video on Bounded Rationality</a>
+                </div>
+
+                <!-- Slide 4: Contributions to AI -->
+                <div id="slide4" class="slide">
+                    <h2 class="text-3xl font-bold text-gray-800 mb-4">Contributions to Artificial Intelligence</h2>
+                    
+                    <ul class="list-disc list-inside text-lg text-gray-700 space-y-2">
+                        <li>Considered one of the founding fathers of AI.</li>
+                        <li><b>Logic Theory Machine (1956):</b> With Allen Newell, he created the first program deliberately engineered to mimic the problem-solving skills of a human being. It was able to prove theorems from Whitehead and Russell's *Principia Mathematica*.</li>
+                        <li><b>General Problem Solver (GPS) (1957):</b> Also with Newell, he developed a program intended to work as a universal problem-solving machine.</li>
+                        <li><b>Physical Symbol System Hypothesis:</b> With Newell, he proposed that a physical symbol system has the necessary and sufficient means for general intelligent action.</li>
+                    </ul>
+                     <a href="https://www.youtube.com/watch?v=h4g4QyUi-A4" target="_blank" class="resource-button">See a video about the Logic Theorist</a>
+                </div>
+
+                <!-- Slide 5: Influence on Modern Day AI -->
+                <div id="slide5" class="slide">
+                    <h2 class="text-3xl font-bold text-gray-800 mb-4">Influence on Modern Day AI</h2>
+                    
+                    <ul class="list-disc list-inside text-lg text-gray-700 space-y-2">
+                        <li>His work on problem-solving as a search process is a fundamental concept in AI.</li>
+                        <li>The idea of heuristics, or rules of thumb, to guide search is central to many AI systems.</li>
+                        <li>His research on human cognition and decision-making has influenced the development of expert systems and other knowledge-based AI.</li>
+                        <li>His interdisciplinary approach helped to establish cognitive science, a field that combines AI, psychology, linguistics, and philosophy.</li>
+                        <li>His vision of machines that could think and learn continues to inspire AI researchers today.</li>
+                    </ul>
+                    <a href="https://www.cmu.edu/simon/about/herbert-a-simon.html" target="_blank" class="resource-button">Explore his legacy at Carnegie Mellon</a>
+                </div>
+            </div>
+
+            <div class="bg-gray-200 p-4 flex justify-between items-center">
+                <button id="prevBtn" class="nav-button">Previous</button>
+                <div id="slide-indicator" class="text-gray-600">Slide 1 of 5</div>
+                <button id="nextBtn" class="nav-button">Next</button>
+            </div>
+        </div>
+    </div>
+
+    <script>
+        let currentSlide = 1;
+        const totalSlides = 5;
+        const slides = document.querySelectorAll('.slide');
+        const prevBtn = document.getElementById('prevBtn');
+        const nextBtn = document.getElementById('nextBtn');
+        const slideIndicator = document.getElementById('slide-indicator');
+
+        function showSlide(n) {
+            slides.forEach(slide => slide.classList.remove('active-slide'));
+            document.getElementById('slide' + n).classList.add('active-slide');
+            slideIndicator.textContent = 'Slide ' + n + ' of ' + totalSlides;
+        }
+
+        prevBtn.addEventListener('click', () => {
+            if (currentSlide > 1) {
+                currentSlide--;
+                showSlide(currentSlide);
+            }
+        });
+
+        nextBtn.addEventListener('click', () => {
+            if (currentSlide < totalSlides) {
+                currentSlide++;
+                showSlide(currentSlide);
+            }
+        });
+
+        showSlide(currentSlide);
+    </script>
+
+</body>
+</html>
 
