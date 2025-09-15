@@ -1,0 +1,195 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>AI Pioneer: Dr. Fei-Fei Li</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;700&display=swap" rel="stylesheet">
+    <style>
+        body {
+            font-family: 'Inter', sans-serif;
+        }
+        .slide {
+            display: none;
+        }
+        .slide.active {
+            display: block;
+        }
+        .fade-in {
+            animation: fadeIn 0.5s ease-in-out;
+        }
+        @keyframes fadeIn {
+            from { opacity: 0; }
+            to { opacity: 1; }
+        }
+    </style>
+</head>
+<body class="bg-gray-100 text-gray-800">
+
+    <div class="container mx-auto p-4 sm:p-8 max-w-4xl">
+        <header class="text-center mb-8">
+            <h1 class="text-4xl font-bold text-indigo-600">AI Pioneer: Dr. Fei-Fei Li</h1>
+            <p class="text-lg text-gray-600 mt-2">An Interactive Presentation</p>
+        </header>
+
+        <main id="presentation-container" class="bg-white rounded-lg shadow-2xl overflow-hidden">
+            <!-- Slide 1: Title -->
+            <div id="slide-1" class="slide active p-8 md:p-12 fade-in">
+                <div class="text-center">
+                    <img src="https://placehold.co/600x400/818cf8/ffffff?text=Dr.+Fei-Fei+Li" alt="Fei-Fei Li" class="w-1/2 mx-auto rounded-lg mb-6 shadow-md" onerror="this.onerror=null;this.src='https://placehold.co/600x400/e0e0e0/000000?text=Image+Not+Found';">
+                    <h2 class="text-3xl font-bold mb-4">The Architect of Modern Computer Vision</h2>
+                    <p class="text-xl text-gray-700">Discover the life and work of a leader who changed the face of Artificial Intelligence.</p>
+                </div>
+            </div>
+
+            <!-- Slide 2: Early Life -->
+            <div id="slide-2" class="slide p-8 md:p-12 fade-in">
+                <h2 class="text-3xl font-bold mb-6 text-indigo-600 border-b-2 border-indigo-200 pb-2">Early Life & Education</h2>
+                <div class="flex flex-col md:flex-row items-center gap-8">
+                    <div class="md:w-2/3 space-y-4">
+                        <p><strong class="font-semibold">A Journey of Resilience:</strong> Born in Beijing in 1976, Dr. Li immigrated to the U.S. at age 16. Despite the language barrier, she excelled academically in Parsippany, New Jersey.</p>
+                        <p><strong class="font-semibold">Academic Excellence:</strong> She earned her undergraduate degree in physics from <strong class="text-indigo-500">Princeton University</strong>.</p>
+                        <p><strong class="font-semibold">Pioneering Research:</strong> She continued her studies at the <strong class="text-indigo-500">California Institute of Technology (Caltech)</strong>, where she received her Ph.D. in electrical engineering, laying the groundwork for her future in AI.</p>
+                         <a href="https://www.youtube.com/watch?v=T3_A44f3kX0" target="_blank" class="inline-block bg-indigo-500 text-white font-bold py-2 px-4 rounded-lg hover:bg-indigo-600 transition duration-300 shadow-md">
+                            Watch: Her Immigrant Story
+                        </a>
+                    </div>
+                    <div class="md:w-1/3">
+                        <img src="https://placehold.co/400x400/a5b4fc/ffffff?text=Early+Journey" alt="Illustration of books and a globe" class="rounded-lg shadow-md" onerror="this.onerror=null;this.src='https://placehold.co/400x400/e0e0e0/000000?text=Image+Not+Found';">
+                    </div>
+                </div>
+            </div>
+
+            <!-- Slide 3: Major Contributions -->
+            <div id="slide-3" class="slide p-8 md:p-12 fade-in">
+                <h2 class="text-3xl font-bold mb-6 text-indigo-600 border-b-2 border-indigo-200 pb-2">Major Contributions</h2>
+                <div class="space-y-6">
+                    <div>
+                        <h3 class="text-2xl font-semibold mb-2">ImageNet: A Paradigm Shift</h3>
+                        <div class="flex flex-col md:flex-row items-center gap-8">
+                            <div class="md:w-1/3">
+                                <img src="https://placehold.co/400x400/c7d2fe/ffffff?text=ImageNet+Concept" alt="Grid of diverse images" class="rounded-lg shadow-md" onerror="this.onerror=null;this.src='https://placehold.co/400x400/e0e0e0/000000?text=Image+Not+Found';">
+                            </div>
+                            <div class="md:w-2/3">
+                                <p>Dr. Li is the principal investigator of ImageNet, a groundbreaking project that created a massive, free database of over 14 million hand-annotated images. This provided the crucial, large-scale data needed to train deep learning models, sparking the revolution in computer vision.</p>
+                                <a href="http://www.image-net.org/" target="_blank" class="mt-4 inline-block bg-green-500 text-white font-bold py-2 px-4 rounded-lg hover:bg-green-600 transition duration-300 shadow-md">
+                                    Explore ImageNet
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+                    <div>
+                        <h3 class="text-2xl font-semibold mb-2">AI4ALL: Fostering Diversity</h3>
+                        <p>She co-founded AI4ALL, a non-profit aimed at increasing diversity and inclusion in AI. The organization runs educational programs for underrepresented high school students, inspiring the next generation of AI leaders.</p>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Slide 4: Influence on Modern AI -->
+            <div id="slide-4" class="slide p-8 md:p-12 fade-in">
+                <h2 class="text-3xl font-bold mb-6 text-indigo-600 border-b-2 border-indigo-200 pb-2">Influence on Modern AI</h2>
+                <p class="mb-6">The creation of ImageNet was a pivotal moment. It proved that with enough data, neural networks could achieve superhuman performance in visual recognition. This principle now underpins countless modern AI applications:</p>
+                <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
+                    <div class="bg-gray-50 p-4 rounded-lg shadow-sm">
+                        <h3 class="font-semibold text-lg mb-2">🚗 Autonomous Vehicles</h3>
+                        <p>Systems that identify pedestrians, signs, and obstacles.</p>
+                    </div>
+                    <div class="bg-gray-50 p-4 rounded-lg shadow-sm">
+                        <h3 class="font-semibold text-lg mb-2">🩺 Medical Imaging Analysis</h3>
+                        <p>AI that helps doctors detect diseases in scans.</p>
+                    </div>
+                    <div class="bg-gray-50 p-4 rounded-lg shadow-sm">
+                        <h3 class="font-semibold text-lg mb-2">📱 Consumer Technology</h3>
+                        <p>Photo organization, augmented reality, and facial recognition.</p>
+                    </div>
+                    <div class="bg-gray-50 p-4 rounded-lg shadow-sm">
+                        <h3 class="font-semibold text-lg mb-2">🤖 Robotics</h3>
+                        <p>Robots that can 'see' and interact with their environment.</p>
+                    </div>
+                </div>
+                 <div class="text-center mt-6">
+                    <a href="https://www.youtube.com/watch?v=40riCqvRoMs" target="_blank" class="inline-block bg-indigo-500 text-white font-bold py-2 px-4 rounded-lg hover:bg-indigo-600 transition duration-300 shadow-md">
+                        Watch: How we teach computers to understand pictures
+                    </a>
+                </div>
+            </div>
+
+             <!-- Slide 5: Human-Centered AI -->
+            <div id="slide-5" class="slide p-8 md:p-12 fade-in">
+                <h2 class="text-3xl font-bold mb-6 text-indigo-600 border-b-2 border-indigo-200 pb-2">Vision: Human-Centered AI</h2>
+                <div class="flex flex-col md:flex-row items-center gap-8">
+                    <div class="md:w-1/3">
+                        <img src="https://placehold.co/400x400/818cf8/ffffff?text=AI+for+Humanity" alt="Illustration of AI and humanity symbiosis" class="rounded-lg shadow-md" onerror="this.onerror=null;this.src='https://placehold.co/400x400/e0e0e0/000000?text=Image+Not+Found';">
+                    </div>
+                    <div class="md:w-2/3 space-y-4">
+                        <p>Beyond technical achievements, Dr. Li is a leading advocate for developing AI that is ethical, responsible, and beneficial for all of humanity.</p>
+                        <blockquote class="border-l-4 border-indigo-500 pl-4 italic text-gray-700">
+                            "I imagine a world where AI is going to be our collaborator. It's going to be our partner. It's going to help us to be better humans."
+                        </blockquote>
+                        <p>Her work at the Stanford Institute for Human-Centered Artificial Intelligence (HAI) focuses on studying, guiding, and developing AI in a way that serves the public interest.</p>
+                        <a href="https://hai.stanford.edu/" target="_blank" class="inline-block bg-green-500 text-white font-bold py-2 px-4 rounded-lg hover:bg-green-600 transition duration-300 shadow-md">
+                           Learn about Stanford HAI
+                        </a>
+                    </div>
+                </div>
+            </div>
+
+        </main>
+
+        <footer class="mt-8">
+            <div class="flex justify-between items-center">
+                <button id="prev-btn" class="bg-gray-300 text-gray-800 font-bold py-2 px-4 rounded-lg hover:bg-gray-400 transition duration-300 disabled:opacity-50 disabled:cursor-not-allowed" disabled>
+                    &larr; Previous
+                </button>
+                <div id="slide-indicator" class="text-sm text-gray-600">
+                    Slide 1 of 5
+                </div>
+                <button id="next-btn" class="bg-indigo-500 text-white font-bold py-2 px-4 rounded-lg hover:bg-indigo-600 transition duration-300">
+                    Next &rarr;
+                </button>
+            </div>
+        </footer>
+
+    </div>
+
+    <script>
+        const slides = document.querySelectorAll('.slide');
+        const prevBtn = document.getElementById('prev-btn');
+        const nextBtn = document.getElementById('next-btn');
+        const slideIndicator = document.getElementById('slide-indicator');
+        let currentSlide = 0;
+        const totalSlides = slides.length;
+
+        function showSlide(index) {
+            slides.forEach((slide, i) => {
+                slide.classList.remove('active');
+                if (i === index) {
+                    slide.classList.add('active');
+                }
+            });
+            slideIndicator.textContent = `Slide ${index + 1} of ${totalSlides}`;
+            prevBtn.disabled = index === 0;
+            nextBtn.disabled = index === totalSlides - 1;
+        }
+
+        nextBtn.addEventListener('click', () => {
+            if (currentSlide < totalSlides - 1) {
+                currentSlide++;
+                showSlide(currentSlide);
+            }
+        });
+
+        prevBtn.addEventListener('click', () => {
+            if (currentSlide > 0) {
+                currentSlide--;
+                showSlide(currentSlide);
+            }
+        });
+
+        // Initialize first slide
+        showSlide(currentSlide);
+    </script>
+
+</body>
+</html>
