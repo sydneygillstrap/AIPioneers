@@ -3,208 +3,221 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>The Pioneers of Artificial Intelligence</title>
+    <title>The Legacy of Al-Khwarizmi</title>
     <script src="https://cdn.tailwindcss.com"></script>
-    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&display=swap" rel="stylesheet">
     <style>
         body {
             font-family: 'Inter', sans-serif;
+            background-color: #f3f4f6;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            min-height: 100vh;
+            padding: 2rem;
         }
-        .pioneer-card {
-            transition: transform 0.3s ease, box-shadow 0.3s ease;
-            border: 1px solid transparent;
+        .presentation-container {
+            width: 100%;
+            max-width: 800px;
+            background-color: #ffffff;
+            border-radius: 1rem;
+            box-shadow: 0 10px 15px -3px rgba(0, 0, 0, 0.1), 0 4px 6px -2px rgba(0, 0, 0, 0.05);
+            padding: 2rem;
+            display: flex;
+            flex-direction: column;
+            gap: 1.5rem;
         }
-        .pioneer-card:hover {
-            transform: translateY(-8px);
-            box-shadow: 0 20px 25px -5px rgba(0, 0, 0, 0.1), 0 10px 10px -5px rgba(0, 0, 0, 0.04);
-            border-color: #e2e8f0;
+        .slide {
+            display: none;
+            flex-direction: column;
+            gap: 1.5rem;
+            animation: fadeIn 0.5s ease-in-out;
         }
-        .btn-link {
-            transition: all 0.3s ease;
-            box-shadow: 0 4px 6px rgba(0,0,0,0.1);
+        .slide.active {
+            display: flex;
         }
-        .btn-link:hover {
-            transform: scale(1.05);
-            box-shadow: 0 7px 14px rgba(0,0,0,0.1), 0 3px 6px rgba(0,0,0,0.08);
+        @keyframes fadeIn {
+            from { opacity: 0; transform: translateY(10px); }
+            to { opacity: 1; transform: translateY(0); }
+        }
+        .slide-title {
+            font-size: 2.25rem;
+            font-weight: 700;
+            color: #1f2937;
+        }
+        .slide-subtitle {
+            font-size: 1.5rem;
+            font-weight: 600;
+            color: #4b5563;
+        }
+        .slide-content {
+            font-size: 1rem;
+            color: #4b5563;
+            line-height: 1.625;
+        }
+        .navigation-buttons {
+            display: flex;
+            justify-content: space-between;
+            margin-top: 1.5rem;
+        }
+        .nav-btn {
+            padding: 0.75rem 1.5rem;
+            background-color: #4c68f1;
+            color: #ffffff;
+            border-radius: 0.75rem;
+            font-weight: 600;
+            transition: background-color 0.3s ease;
+            cursor: pointer;
+            text-decoration: none;
+            display: inline-flex;
+            align-items: center;
+            justify-content: center;
+        }
+        .nav-btn:hover {
+            background-color: #3b50d3;
+        }
+        .nav-btn:disabled {
+            background-color: #d1d5db;
+            color: #6b7280;
+            cursor: not-allowed;
+        }
+        .resource-btn {
+            display: inline-block;
+            margin-top: 1rem;
+            padding: 0.75rem 1.5rem;
+            background-color: #38a169;
+            color: #ffffff;
+            border-radius: 0.75rem;
+            font-weight: 600;
+            transition: background-color 0.3s ease;
+            text-decoration: none;
+            text-align: center;
+        }
+        .resource-btn:hover {
+            background-color: #2f855a;
+        }
+        .image-container {
+            display: flex;
+            justify-content: center;
+            margin: 1.5rem 0;
+        }
+        .content-image {
+            max-width: 100%;
+            height: auto;
+            border-radius: 0.75rem;
+            box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1), 0 2px 4px -1px rgba(0, 0, 0, 0.06);
         }
     </style>
 </head>
-<body class="bg-gray-50">
-
-    <!-- Header Section -->
-    <header class="bg-gradient-to-r from-teal-400 to-blue-500 text-white shadow-lg">
-        <div class="container mx-auto px-6 py-12 text-center">
-            <h1 class="text-4xl md:text-6xl font-bold tracking-tight">The Pioneers of Artificial Intelligence</h1>
-        </div>
-    </header>
-
-    <main class="container mx-auto px-6 py-10">
-        <!-- Introduction Section -->
-        <section class="mb-16 bg-violet-100 text-violet-900 rounded-xl p-8 shadow-md">
-            <p class="text-lg md:text-xl text-center leading-relaxed">
-                An AI Pioneer is a visionary whose ideas and discoveries fundamentally shaped the field of artificial intelligence. These brilliant minds—from ancient mathematicians who conceived of algorithms to modern computer scientists who build neural networks—laid the groundwork for the intelligent systems we see today. They challenged the limits of human knowledge, dared to ask "Can machines think?", and built the conceptual and practical tools to begin answering that question. Exploring their stories is to understand the very foundations of AI.
-            </p>
-        </section>
-
-        <!-- Pioneers Grid Section -->
-        <section>
-            <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-8 md:gap-10">
-                
-                <!-- Al-Khwarizmi -->
-                <div class="pioneer-card bg-white rounded-lg overflow-hidden shadow-sm flex flex-col">
-                    <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/d/d3/Khwarizmi.jpg/800px-Khwarizmi.jpg" alt="An illustration of Al-Khwarizmi" class="w-full h-48 object-cover">
-                    <div class="p-6 flex-grow flex flex-col">
-                        <h3 class="text-2xl font-bold text-gray-800">Al-Khwarizmi</h3>
-                        <p class="text-gray-500 mb-4">(c. 780 – c. 850)</p>
-                        <div class="mt-auto">
-                            <a href="Khwarizimi.html" class="btn-link block w-full bg-emerald-500 text-white font-bold text-center py-3 px-4 rounded-lg hover:bg-emerald-600">Explore His Legacy</a>
-                        </div>
-                    </div>
-                </div>
-
-                <!-- George Boole -->
-                <div class="pioneer-card bg-white rounded-lg overflow-hidden shadow-sm flex flex-col">
-                    <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/c/ce/George_Boole_color.jpg/800px-George_Boole_color.jpg" alt="Portrait of George Boole" class="w-full h-48 object-cover">
-                    <div class="p-6 flex-grow flex flex-col">
-                        <h3 class="text-2xl font-bold text-gray-800">George Boole</h3>
-                        <p class="text-gray-500 mb-4">(1815–1864)</p>
-                        <div class="mt-auto">
-                           <a href="Boole.html" class="btn-link block w-full bg-sky-500 text-white font-bold text-center py-3 px-4 rounded-lg hover:bg-sky-600">Discover His Logic</a>
-                        </div>
-                    </div>
-                </div>
-                
-                <!-- Alan Turing -->
-                <div class="pioneer-card bg-white rounded-lg overflow-hidden shadow-sm flex flex-col">
-                    <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/a/a1/Alan_Turing_Aged_16.jpg/800px-Alan_Turing_Aged_16.jpg" alt="Portrait of Alan Turing" class="w-full h-48 object-cover">
-                    <div class="p-6 flex-grow flex flex-col">
-                        <h3 class="text-2xl font-bold text-gray-800">Alan Turing</h3>
-                        <p class="text-gray-500 mb-4">(1912–1954)</p>
-                        <div class="mt-auto">
-                           <a href="Turing.html" class="btn-link block w-full bg-indigo-500 text-white font-bold text-center py-3 px-4 rounded-lg hover:bg-indigo-600">See His Vision</a>
-                        </div>
-                    </div>
-                </div>
-
-                <!-- Arthur Samuel -->
-                <div class="pioneer-card bg-white rounded-lg overflow-hidden shadow-sm flex flex-col">
-                    <img src="https://history-computer.com/ModernComputer/Software/images/Samuel.jpg" alt="Portrait of Arthur Samuel" class="w-full h-48 object-cover">
-                    <div class="p-6 flex-grow flex flex-col">
-                        <h3 class="text-2xl font-bold text-gray-800">Arthur Samuel</h3>
-                        <p class="text-gray-500 mb-4">(1901–1990)</p>
-                        <div class="mt-auto">
-                            <a href="Samuel.html" class="btn-link block w-full bg-rose-500 text-white font-bold text-center py-3 px-4 rounded-lg hover:bg-rose-600">Learn About Gaming AI</a>
-                        </div>
-                    </div>
-                </div>
-
-                <!-- Herbert Simon -->
-                <div class="pioneer-card bg-white rounded-lg overflow-hidden shadow-sm flex flex-col">
-                    <img src="https://www.nobelprize.org/images/simon-13426-portrait-medium.jpg" alt="Portrait of Herbert Simon" class="w-full h-48 object-cover">
-                    <div class="p-6 flex-grow flex flex-col">
-                        <h3 class="text-2xl font-bold text-gray-800">Herbert Simon</h3>
-                        <p class="text-gray-500 mb-4">(1916–2001)</p>
-                         <div class="mt-auto">
-                            <a href="Simon.html" class="btn-link block w-full bg-amber-500 text-white font-bold text-center py-3 px-4 rounded-lg hover:bg-amber-600">Understand His Mind</a>
-                        </div>
-                    </div>
-                </div>
-
-                <!-- Joseph Weizenbaum -->
-                <div class="pioneer-card bg-white rounded-lg overflow-hidden shadow-sm flex flex-col">
-                    <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/a/a2/Joseph_Weizenbaum_1987_in_Erlangen.jpg/800px-Joseph_Weizenbaum_1987_in_Erlangen.jpg" alt="Portrait of Joseph Weizenbaum" class="w-full h-48 object-cover">
-                    <div class="p-6 flex-grow flex flex-col">
-                        <h3 class="text-2xl font-bold text-gray-800">Joseph Weizenbaum</h3>
-                        <p class="text-gray-500 mb-4">(1923–2008)</p>
-                        <div class="mt-auto">
-                           <a href="Weizenbaum.html" class="btn-link block w-full bg-cyan-500 text-white font-bold text-center py-3 px-4 rounded-lg hover:bg-cyan-600">Meet ELIZA</a>
-                        </div>
-                    </div>
-                </div>
-                
-                <!-- Allen Newell -->
-                <div class="pioneer-card bg-white rounded-lg overflow-hidden shadow-sm flex flex-col">
-                    <img src="https://upload.wikimedia.org/wikipedia/en/e/e5/Allen_Newell.jpg" alt="Portrait of Allen Newell" class="w-full h-48 object-cover">
-                    <div class="p-6 flex-grow flex flex-col">
-                        <h3 class="text-2xl font-bold text-gray-800">Allen Newell</h3>
-                        <p class="text-gray-500 mb-4">(1927–1992)</p>
-                        <div class="mt-auto">
-                           <a href="Newell.html" class="btn-link block w-full bg-fuchsia-500 text-white font-bold text-center py-3 px-4 rounded-lg hover:bg-fuchsia-600">View His Logic</a>
-                        </div>
-                    </div>
-                </div>
-
-                <!-- John McCarthy -->
-                <div class="pioneer-card bg-white rounded-lg overflow-hidden shadow-sm flex flex-col">
-                    <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/4/49/John_McCarthy_Stanford.jpg/800px-John_McCarthy_Stanford.jpg" alt="Portrait of John McCarthy" class="w-full h-48 object-cover">
-                    <div class="p-6 flex-grow flex flex-col">
-                        <h3 class="text-2xl font-bold text-gray-800">John McCarthy</h3>
-                        <p class="text-gray-500 mb-4">(1927–2011)</p>
-                        <div class="mt-auto">
-                            <a href="McCarthy.html" class="btn-link block w-full bg-orange-500 text-white font-bold text-center py-3 px-4 rounded-lg hover:bg-orange-600">The Father of AI</a>
-                        </div>
-                    </div>
-                </div>
-
-                <!-- Marvin Minsky -->
-                <div class="pioneer-card bg-white rounded-lg overflow-hidden shadow-sm flex flex-col">
-                    <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/e/e7/Marvin_Minsky_1974.jpg/800px-Marvin_Minsky_1974.jpg" alt="Portrait of Marvin Minsky" class="w-full h-48 object-cover">
-                    <div class="p-6 flex-grow flex flex-col">
-                        <h3 class="text-2xl font-bold text-gray-800">Marvin Minsky</h3>
-                        <p class="text-gray-500 mb-4">(1927–2016)</p>
-                         <div class="mt-auto">
-                            <a href="Minsky.html" class="btn-link block w-full bg-lime-500 text-white font-bold text-center py-3 px-4 rounded-lg hover:bg-lime-600">Explore the Mind</a>
-                        </div>
-                    </div>
-                </div>
-
-                <!-- Geoffrey Hinton -->
-                <div class="pioneer-card bg-white rounded-lg overflow-hidden shadow-sm flex flex-col">
-                    <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/b/b3/Geoffrey_Hinton_at_the_2018_CIFAR_Deep_Learning_Symposium_2_%28cropped%29.jpg/800px-Geoffrey_Hinton_at_the_2018_CIFAR_Deep_Learning_Symposium_2_%28cropped%29.jpg" alt="Portrait of Geoffrey Hinton" class="w-full h-48 object-cover">
-                    <div class="p-6 flex-grow flex flex-col">
-                        <h3 class="text-2xl font-bold text-gray-800">Geoffrey Hinton</h3>
-                        <p class="text-gray-500 mb-4">(1947–Present)</p>
-                         <div class="mt-auto">
-                            <a href="Hinton.html" class="btn-link block w-full bg-red-500 text-white font-bold text-center py-3 px-4 rounded-lg hover:bg-red-600">The "Godfather of AI"</a>
-                        </div>
-                    </div>
-                </div>
-
-                <!-- Fei-Fei Li -->
-                <div class="pioneer-card bg-white rounded-lg overflow-hidden shadow-sm flex flex-col">
-                    <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/8/82/Fei-Fei_Li_in_2018.jpg/800px-Fei-Fei_Li_in_2018.jpg" alt="Portrait of Fei-Fei Li" class="w-full h-48 object-cover">
-                    <div class="p-6 flex-grow flex flex-col">
-                        <h3 class="text-2xl font-bold text-gray-800">Fei-Fei Li</h3>
-                        <p class="text-gray-500 mb-4">(1976–Present)</p>
-                         <div class="mt-auto">
-                            <a href="Li.html" class="btn-link block w-full bg-purple-500 text-white font-bold text-center py-3 px-4 rounded-lg hover:bg-purple-600">Democratizing AI</a>
-                        </div>
-                    </div>
-                </div>
-
-                <!-- Ashish Vaswani -->
-                <div class="pioneer-card bg-white rounded-lg overflow-hidden shadow-sm flex flex-col">
-                    <img src="https://pbs.twimg.com/profile_images/1511554534722535424/7sK41_25_400x400.jpg" alt="Portrait of Ashish Vaswani" class="w-full h-48 object-cover">
-                    <div class="p-6 flex-grow flex flex-col">
-                        <h3 class="text-2xl font-bold text-gray-800">Ashish Vaswani</h3>
-                        <p class="text-gray-500 mb-4">(2017–Present)</p>
-                        <div class="mt-auto">
-                            <a href="Vaswani.html" class="btn-link block w-full bg-pink-500 text-white font-bold text-center py-3 px-4 rounded-lg hover:bg-pink-600">All You Need Is Attention</a>
-                        </div>
-                    </div>
-                </div>
-
+<body class="bg-gray-100 flex items-center justify-center min-h-screen p-8">
+    <div class="presentation-container">
+        
+        <!-- Slide 1: Title -->
+        <div id="slide-1" class="slide active">
+            <h1 class="slide-title">The Legacy of Al-Khwarizmi</h1>
+            <p class="slide-subtitle">An AI Pioneer</p>
+            <div class="image-container">
+                <img src="https://placehold.co/400x250/2563eb/ffffff?text=Al-Khwarizmi+Portrait" alt="A depiction of Al-Khwarizmi" class="content-image">
             </div>
-        </section>
-    </main>
+            <p class="slide-content">This presentation explores the life and contributions of Al-Khwarizmi, a key figure in the history of mathematics and the conceptual father of artificial intelligence.</p>
+        </div>
 
-    <footer class="text-center py-8 mt-10 bg-gray-800 text-gray-400">
-        <p>&copy; 2024 AI Pioneers Project. All rights reserved.</p>
-    </footer>
+        <!-- Slide 2: Early Life -->
+        <div id="slide-2" class="slide">
+            <h2 class="slide-title">Early Life and Major Works</h2>
+            <p class="slide-content">Muhammad ibn Musa al-Khwarizmi (c. 780-850 CE) was a Persian polymath who worked at the House of Wisdom in Baghdad. Under the patronage of Caliph al-Ma'mun, he was part of a vibrant intellectual movement that translated and built upon the works of Greek, Indian, and other scholars.</p>
+            <ul class="list-disc list-inside mt-4 space-y-2 text-gray-700">
+                <li>He is known for his work in mathematics, astronomy, and geography.</li>
+                <li>His name is the origin of the term "algorithm."</li>
+                <li>He is considered the father of algebra.</li>
+            </ul>
+        </div>
 
-</body>
-</html>
+        <!-- Slide 3: Contributions to Math -->
+        <div id="slide-3" class="slide">
+            <h2 class="slide-title">Major Mathematical Contributions</h2>
+            <p class="slide-content">Al-Khwarizmi's work was revolutionary in two key areas that still resonate today:</p>
+            <div class="mt-6">
+                <h3 class="slide-subtitle text-lg">The Birth of Algebra</h3>
+                <p class="slide-content mt-2">His book, *Al-Kitab al-Mukhtasar fi Hisab al-Jabr wal-Muqabala*, provided the first systematic approach to solving linear and quadratic equations. The word "algebra" comes from the Arabic word "al-jabr" in his book's title.</p>
+                <a href="https://en.wikipedia.org/wiki/Al-Jabr" target="_blank" class="resource-btn">Learn More about *Al-Jabr*</a>
+            </div>
+            <div class="mt-6">
+                <h3 class="slide-subtitle text-lg">The Concept of the Algorithm</h3>
+                <p class="slide-content mt-2">The word "algorithm" is a Latinized version of his name, *Algoritmi*. He provided clear, step-by-step procedures for solving mathematical problems, laying the conceptual groundwork for what we now understand as an algorithm—a finite sequence of instructions to solve a problem.</p>
+                <a href="https://www.khanacademy.org/computing/computer-science/algorithms/intro-to-algorithms/v/what-are-algorithms" target="_blank" class="resource-btn">Watch a Video on Algorithms</a>
+            </div>
+        </div>
 
+        <!-- Slide 4: AI Connection -->
+        <div id="slide-4" class="slide">
+            <h2 class="slide-title">The Foundation of Artificial Intelligence</h2>
+            <p class="slide-content">Al-Khwarizmi's work, while ancient, is the conceptual root of modern AI. His innovations in algorithms and numerical systems are the essential building blocks for how computers function and "think" today.</p>
+            <div class="image-container">
+                <img src="https://placehold.co/400x250/2563eb/ffffff?text=Algorithm+Flowchart" alt="An abstract flowchart representing an algorithm" class="content-image">
+            </div>
+            <ul class="list-disc list-inside mt-4 space-y-2 text-gray-700">
+                <li><strong>Algorithmic Logic:</strong> Every AI system, from a simple chatbot to a complex neural network, relies on algorithms to process data, make decisions, and learn.</li>
+                <li><strong>Numerical Systems:</strong> His promotion of the Hindu-Arabic numeral system, including the crucial concept of zero, paved the way for the binary system used in all computers.</li>
+            </ul>
+        </div>
 
+        <!-- Slide 5: Modern Influence -->
+        <div id="slide-5" class="slide">
+            <h2 class="slide-title">Influence on Modern AI</h2>
+            <p class="slide-content">Al-Khwarizmi's legacy is the systematic approach to problem-solving. This foundational thinking is what allows modern AI to exist and operate at scale. Without his contributions, the very framework for computing would be fundamentally different. He taught us how to break down complex challenges into manageable, repeatable steps, a principle that drives all of today's digital innovations.</p>
+            <a href="https://www.britannica.com/biography/al-Khwarizmi" target="_blank" class="resource-btn">Read More on Al-Khwarizmi's Influence</a>
+        </div>
+
+        <!-- Navigation Buttons -->
+        <div class="navigation-buttons">
+            <button id="prevBtn" class="nav-btn" disabled>Previous</button>
+            <button id="nextBtn" class="nav-btn">Next</button>
+        </div>
+
+    </div>
+
+    <script>
+        document.addEventListener('DOMContentLoaded', () => {
+            const slides = document.querySelectorAll('.slide');
+            const prevBtn = document.getElementById('prevBtn');
+            const nextBtn = document.getElementById('nextBtn');
+            let currentSlide = 0;
+
+            function showSlide(index) {
+                slides.forEach((slide, i) => {
+                    slide.classList.remove('active');
+                    if (i === index) {
+                        slide.classList.add('active');
+                    }
+                });
+                updateButtons(index);
+            }
+
+            function updateButtons(index) {
+                prevBtn.disabled = index === 0;
+                nextBtn.disabled = index === slides.length - 1;
+            }
+
+            prevBtn.addEventListener('click', () => {
+                if (currentSlide > 0) {
+                    currentSlide--;
+                    showSlide(currentSlide);
+                }
+            });
+
+            nextBtn.addEventListener('click', () => {
+                if (currentSlide < slides.length - 1) {
+                    currentSlide++;
+                    showSlide(currentSlide);
+                }
+            });
+
+            // Initial state
+            showSlide(currentSlide);
+        });
+    </script>
 </body>
 </html>
