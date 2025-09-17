@@ -1,10 +1,189 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
 <head>
-<title>My Awesome Website</title>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>The Pioneers of Artificial Intelligence</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+    <style>
+        body {
+            font-family: 'Inter', sans-serif;
+        }
+        .pioneer-card {
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+            border: 1px solid transparent;
+        }
+        .pioneer-card:hover {
+            transform: translateY(-8px);
+            box-shadow: 0 20px 25px -5px rgba(0, 0, 0, 0.1), 0 10px 10px -5px rgba(0, 0, 0, 0.04);
+            border-color: #e2e8f0;
+        }
+        .btn-link {
+            transition: all 0.3s ease;
+            box-shadow: 0 4px 6px rgba(0,0,0,0.1);
+        }
+        .btn-link:hover {
+            transform: scale(1.05);
+            box-shadow: 0 7px 14px rgba(0,0,0,0.1), 0 3px 6px rgba(0,0,0,0.08);
+        }
+    </style>
 </head>
-<body>
-<h1>Hello, World!</h1>
-<p>Welcome to my first GitHub Pages website.</p>
-</body>
-</html>
+<body class="bg-gray-50">
+
+    <!-- Header Section -->
+    <header class="bg-gradient-to-r from-teal-400 to-blue-500 text-white shadow-lg">
+        <div class="container mx-auto px-6 py-12 text-center">
+            <h1 class="text-4xl md:text-6xl font-bold tracking-tight">The Pioneers of Artificial Intelligence</h1>
+        </div>
+    </header>
+
+    <main class="container mx-auto px-6 py-10">
+        <!-- Introduction Section -->
+        <section class="mb-16 bg-violet-100 text-violet-900 rounded-xl p-8 shadow-md">
+            <p class="text-lg md:text-xl text-center leading-relaxed">
+                An AI Pioneer is a visionary whose ideas and discoveries fundamentally shaped the field of artificial intelligence. These brilliant minds—from ancient mathematicians who conceived of algorithms to modern computer scientists who build neural networks—laid the groundwork for the intelligent systems we see today. They challenged the limits of human knowledge, dared to ask "Can machines think?", and built the conceptual and practical tools to begin answering that question. Exploring their stories is to understand the very foundations of AI.
+            </p>
+        </section>
+
+        <!-- Pioneers Grid Section -->
+        <section>
+            <div class="grid grid-cols-1 sm-grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-8 md:gap-10">
+                
+                <!-- NOTE: Replace the placeholder image URLs with actual images of the pioneers. -->
+                
+                <!-- Al-Khwarizmi -->
+                <div class="pioneer-card bg-white rounded-lg overflow-hidden shadow-sm flex flex-col">
+                    <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/c/cf/A_Khorezm_figure.jpg/800px-A_Khorezm_figure.jpg" alt="A statue representing Al-Khwarizmi" class="w-full h-48 object-cover">
+                    <div class="p-6 flex-grow flex flex-col">
+                        <h3 class="text-2xl font-bold text-gray-800">Al-Khwarizmi</h3>
+                        <p class="text-gray-500 mb-4">(c. 780 – c. 850)</p>
+                        <div class="mt-auto">
+                            <a href="Khwarizimi.html" class="btn-link block w-full bg-emerald-500 text-white font-bold text-center py-3 px-4 rounded-lg hover:bg-emerald-600">Explore His Legacy</a>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- George Boole -->
+                <div class="pioneer-card bg-white rounded-lg overflow-hidden shadow-sm flex flex-col">
+                    <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/c/ce/George_Boole_color.jpg/800px-George_Boole_color.jpg" alt="Portrait of George Boole" class="w-full h-48 object-cover">
+                    <div class="p-6 flex-grow flex flex-col">
+                        <h3 class="text-2xl font-bold text-gray-800">George Boole</h3>
+                        <p class="text-gray-500 mb-4">(1815–1864)</p>
+                        <div class="mt-auto">
+                           <a href="Boole.html" class="btn-link block w-full bg-sky-500 text-white font-bold text-center py-3 px-4 rounded-lg hover:bg-sky-600">Discover His Logic</a>
+                        </div>
+                    </div>
+                </div>
+                
+                <!-- Alan Turing -->
+                <div class="pioneer-card bg-white rounded-lg overflow-hidden shadow-sm flex flex-col">
+                    <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/a/a1/Alan_Turing_Aged_16.jpg/800px-Alan_Turing_Aged_16.jpg" alt="Portrait of Alan Turing" class="w-full h-48 object-cover">
+                    <div class="p-6 flex-grow flex flex-col">
+                        <h3 class="text-2xl font-bold text-gray-800">Alan Turing</h3>
+                        <p class="text-gray-500 mb-4">(1912–1954)</p>
+                        <div class="mt-auto">
+                           <a href="Turing.html" class="btn-link block w-full bg-indigo-500 text-white font-bold text-center py-3 px-4 rounded-lg hover:bg-indigo-600">See His Vision</a>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Arthur Samuel -->
+                <div class="pioneer-card bg-white rounded-lg overflow-hidden shadow-sm flex flex-col">
+                    <img src="https://upload.wikimedia.org/wikipedia/en/thumb/5/5c/Arthur_Samuel.jpg/800px-Arthur_Samuel.jpg" alt="Portrait of Arthur Samuel" class="w-full h-48 object-cover">
+                    <div class="p-6 flex-grow flex flex-col">
+                        <h3 class="text-2xl font-bold text-gray-800">Arthur Samuel</h3>
+                        <p class="text-gray-500 mb-4">(1901–1990)</p>
+                        <div class="mt-auto">
+                            <a href="Samuel.html" class="btn-link block w-full bg-rose-500 text-white font-bold text-center py-3 px-4 rounded-lg hover:bg-rose-600">Learn About Gaming AI</a>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Herbert Simon -->
+                <div class="pioneer-card bg-white rounded-lg overflow-hidden shadow-sm flex flex-col">
+                    <img src="https://upload.wikimedia.org/wikipedia/en/thumb/9/91/Herbert_A._Simon.jpg/800px-Herbert_A._Simon.jpg" alt="Portrait of Herbert Simon" class="w-full h-48 object-cover">
+                    <div class="p-6 flex-grow flex flex-col">
+                        <h3 class="text-2xl font-bold text-gray-800">Herbert Simon</h3>
+                        <p class="text-gray-500 mb-4">(1916–2001)</p>
+                         <div class="mt-auto">
+                            <a href="Simon.html" class="btn-link block w-full bg-amber-500 text-white font-bold text-center py-3 px-4 rounded-lg hover:bg-amber-600">Understand His Mind</a>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Joseph Weizenbaum -->
+                <div class="pioneer-card bg-white rounded-lg overflow-hidden shadow-sm flex flex-col">
+                    <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/0/03/Joseph_Weizenbaum_at_the_Chaos_Communication_Congress_2002.jpg/800px-Joseph_Weizenbaum_at_the_Chaos_Communication_Congress_2002.jpg" alt="Portrait of Joseph Weizenbaum" class="w-full h-48 object-cover">
+                    <div class="p-6 flex-grow flex flex-col">
+                        <h3 class="text-2xl font-bold text-gray-800">Joseph Weizenbaum</h3>
+                        <p class="text-gray-500 mb-4">(1923–2008)</p>
+                        <div class="mt-auto">
+                           <a href="Weizenbaum.html" class="btn-link block w-full bg-cyan-500 text-white font-bold text-center py-3 px-4 rounded-lg hover:bg-cyan-600">Meet ELIZA</a>
+                        </div>
+                    </div>
+                </div>
+                
+                <!-- Allen Newell -->
+                <div class="pioneer-card bg-white rounded-lg overflow-hidden shadow-sm flex flex-col">
+                    <img src="https://upload.wikimedia.org/wikipedia/en/e/e5/Allen_Newell.jpg" alt="Portrait of Allen Newell" class="w-full h-48 object-cover">
+                    <div class="p-6 flex-grow flex flex-col">
+                        <h3 class="text-2xl font-bold text-gray-800">Allen Newell</h3>
+                        <p class="text-gray-500 mb-4">(1927–1992)</p>
+                        <div class="mt-auto">
+                           <a href="Newell.html" class="btn-link block w-full bg-fuchsia-500 text-white font-bold text-center py-3 px-4 rounded-lg hover:bg-fuchsia-600">View His Logic</a>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- John McCarthy -->
+                <div class="pioneer-card bg-white rounded-lg overflow-hidden shadow-sm flex flex-col">
+                    <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/4/49/John_McCarthy_Stanford.jpg/800px-John_McCarthy_Stanford.jpg" alt="Portrait of John McCarthy" class="w-full h-48 object-cover">
+                    <div class="p-6 flex-grow flex flex-col">
+                        <h3 class="text-2xl font-bold text-gray-800">John McCarthy</h3>
+                        <p class="text-gray-500 mb-4">(1927–2011)</p>
+                        <div class="mt-auto">
+                            <a href="McCarthy.html" class="btn-link block w-full bg-orange-500 text-white font-bold text-center py-3 px-4 rounded-lg hover:bg-orange-600">The Father of AI</a>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Marvin Minsky -->
+                <div class="pioneer-card bg-white rounded-lg overflow-hidden shadow-sm flex flex-col">
+                    <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/2/28/Marvin_Minsky_at_OLPCb.jpg/800px-Marvin_Minsky_at_OLPCb.jpg" alt="Portrait of Marvin Minsky" class="w-full h-48 object-cover">
+                    <div class="p-6 flex-grow flex flex-col">
+                        <h3 class="text-2xl font-bold text-gray-800">Marvin Minsky</h3>
+                        <p class="text-gray-500 mb-4">(1927–2016)</p>
+                         <div class="mt-auto">
+                            <a href="Minsky.html" class="btn-link block w-full bg-lime-500 text-white font-bold text-center py-3 px-4 rounded-lg hover:bg-lime-600">Explore the Mind</a>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Geoffrey Hinton -->
+                <div class="pioneer-card bg-white rounded-lg overflow-hidden shadow-sm flex flex-col">
+                    <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/b/b3/Geoffrey_Hinton_at_the_2018_CIFAR_Deep_Learning_Symposium_2_%28cropped%29.jpg/800px-Geoffrey_Hinton_at_the_2018_CIFAR_Deep_Learning_Symposium_2_%28cropped%29.jpg" alt="Portrait of Geoffrey Hinton" class="w-full h-48 object-cover">
+                    <div class="p-6 flex-grow flex flex-col">
+                        <h3 class="text-2xl font-bold text-gray-800">Geoffrey Hinton</h3>
+                        <p class="text-gray-500 mb-4">(1947–Present)</p>
+                         <div class="mt-auto">
+                            <a href="Hinton.html" class="btn-link block w-full bg-red-500 text-white font-bold text-center py-3 px-4 rounded-lg hover:bg-red-600">The "Godfather of AI"</a>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Fei-Fei Li -->
+                <div class="pioneer-card bg-white rounded-lg overflow-hidden shadow-sm flex flex-col">
+                    <img src="data:image/jpeg;base64,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" alt="Portrait of Fei-Fei Li" class="w-full h-48 object-cover">
+                    <div class="p-6 flex-grow flex flex-col">
+                        <h3 class="text-2xl font-bold text-gray-800">Fei-Fei Li</h3>
+                        <p class="text-gray-500 mb-4">(1976–Present)</p>
+                         <div class="mt-auto">
+                            <a href="Li.html" class="btn-link block w-full bg-purple-500 text-white font-bold text-center py-3 px-4 rounded-lg hover:bg-purple-600">Democratizing AI</a>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Ashish Vaswani -->
+                <div class="pioneer-card bg-white rounded-lg overflow-hidden shadow-sm flex flex-col">
+     
